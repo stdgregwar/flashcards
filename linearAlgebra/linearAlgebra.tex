@@ -1,0 +1,83 @@
+% -*- coding-system:utf-8 
+% LATEX PREAMBLE --- needs to be imported manually
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+
+%%% commands that do not need to imported into Anki:
+\usepackage{mdframed}
+\newcommand*{\xfield}[1]{\begin{mdframed}\centering #1\end{mdframed}\bigskip}
+\newenvironment{note}{}{}
+% END OF THE PREAMBLE
+
+\begin{document}
+
+\begin{note}
+    \xfield{How do we qualify a system of equation with one or more solution ?}
+    \xfield{consistent}
+\end{note}
+
+\begin{note}
+    \xfield{How do we qualify a system of equation with no solution ?}
+    \xfield{inconsistent}
+\end{note}
+
+\begin{note}
+    \xfield{What does it mean if two systems of equations are equivalent ?}
+    \xfield{They have the same solutions sets}
+\end{note}
+
+\begin{note}
+    \xfield{What are the possible elementary row operations ?}
+    \xfield{\begin{itemize} \item Swap arrows \item  multiply a row by a non zero constant \item  add a row to another \end{itemize}}
+\end{note}
+
+\begin{note}
+    \xfield{Once a system of equation has been transformed in an augmented matrix and put in echelon form through elementary row operations, what are the different possibilities ?}
+    \xfield{\begin{itemize} \item if last row (0 0 0 0 $\neq$ | 0), then inconsistent \item if \#pivots=\#variable, then 1 solution \item if \#pivots $<$ \#variables, then $\infty$ solutions \end{itemize}}
+\end{note}
+
+\begin{note}
+    \xfield{What is the definition for a set of vectors to be linearly dependent}
+    \xfield{It means that when the linear combination of the set is equal to the vector zero (i.e \begin{math}c_1\underline{v_1}+c_2\underline{v_2}+...+c_n\underline{v_n}=\underline{0}\end{math}), it has a non-zero solution}
+\end{note}
+
+\begin{note}
+    \xfield{What is the definition for a set of vectors to be linearly independent}
+    \xfield{It means that when the linear combination of the set is equal to the vector zero (i.e \begin{math}c_1\underline{v_1}+c_2\underline{v_2}+...+c_n\underline{v_n}=\underline{0}\end{math}), it has no non-zero solution (and the vector zero is the only solution)}
+\end{note}
+
+\begin{note}
+    \xfield{Define the rank of a matrix}
+    \xfield{It is the maximal number r, s.t. A has r lin. indep. columns (in echelon form, it can be deduced from the numbers of pivots)}
+\end{note}
+
+\begin{note}
+    \xfield{for A and B two matrices, \begin{math}(AB)^T\ =\ ?\end{math}}
+    \xfield{\begin{math}B^TA^T\end{math}}
+\end{note}
+
+\begin{note}
+    \xfield{Define the condition for a matrix \begin{math}A \in \mathbb{R}^{n\cdot n} \end{math} to be invertible}
+    \xfield{Invertible if there exists a \begin{math}C \in \mathbb{R}^{n\cdot n}\ s.t.\ CA = I\ \text{and}\ AC = I\end{math}}
+\end{note}
+
+\begin{note}
+    \xfield{Give the definition of being onto (surjective) for a transformation $T : X \rightarrow Y$ and how it translates when the matrix is in echelon form}
+    \xfield{T is onto if for every \begin{math}y \in Y\end{math} there is \underline{at least one} \begin{math}x \in X \text{s.t.} T(x)=y\end{math} in echelon form, no (0...0 0 0) row}
+\end{note}
+
+\begin{note}
+    \xfield{Give the definition of being bijective for a transformation $T : X \rightarrow Y$ and how it translates when the matrix is in echelon form}
+    \xfield{T is onto if for every \begin{math}y \in Y\end{math} there is \underline{exactly one} \begin{math}x \in X \text{s.t.} T(x)=y\end{math} in echelon form, no (0... 0 0 0 ) row and \#pivots = \#vars}
+\end{note}
+
+\begin{note}
+    \xfield{Give the definition of being one-to-one (injective) for a transformation $T : X \rightarrow Y$ and how it translates when the matrix is in echelon form}
+    \xfield{T is one-to-one if for every \begin{math}y \in Y\end{math} there is \underline{at most one} \begin{math}x \in X \text{s.t.} T(x)=y\end{math} In echelon form, it means that \#pivots = \#vars}
+\end{note}
+
+\end{document}

@@ -1,0 +1,267 @@
+% -*- coding-system:utf-8 
+% LATEX PREAMBLE --- needs to be imported manually
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+
+%%% commands that do not need to imported into Anki:
+\usepackage{mdframed}
+\newcommand*{\xfield}[1]{\begin{mdframed}\centering #1\end{mdframed}\bigskip}
+\newenvironment{note}{}{}
+% END OF THE PREAMBLE
+\begin{document}
+
+\begin{note}
+    \xfield{What is logically equivalent to $p \rightarrow q$}
+    \xfield{$\neg p \vee q$}
+\end{note}
+
+\begin{note}
+    \xfield{What's De Morgan's law}
+    \xfield{
+        $\neg (p\wedge q) \equiv \neg p \vee \neg q$  \\
+        $\neg (p \vee q) \equiv \neg p \wedge \neg q$
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What is a predicate ?}
+    \xfield{A "formula that involves some variables, variables which come from a domain.}
+\end{note}
+
+\begin{note}
+    \xfield{What are the two quantifiers ?}
+    \xfield{$\forall$ which means "for all" \& $\exists$ which means "there exists"}
+\end{note}
+
+\begin{note}
+    \xfield{Give the rules of negation of quantifiers.}
+    \xfield{
+        $\neg (\forall x P(x)) \equiv \exists x \neg P(x)$ \\
+        $\neg (\exists x P(x) \equiv \forall x \neg P(x)$
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does modus ponens implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}                          & $p$ \\& $p \to q$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}}
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}} 
+                                 & $p$ \\
+        & $p \to q$ \\\cline{2-2}
+            $\therefore$         & $q$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does modus tollens implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}                          & $\neg p$ \\& $p \to q$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}}
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}} 
+                                 & $\neg p$ \\
+        & $p \to q$ \\\cline{2-2}
+            $\therefore$         & $q$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does simplification implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}} & $p \wedge q$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}}
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}}         
+        & $p \wedge q$ \\\cline{2-2}
+            $\therefore$         & \ p \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does addition rule implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}} & $p$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}}
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}} 
+        & $p$ \\\cline{2-2}
+            $\therefore$         & \ $p \vee q$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does conjonction implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $p$ \\
+        & $q$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}}& $p$ \\
+        & $q$ \\\cline{2-2}    $\therefore$         & \ $p \wedge q$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the hypotetical syllogism implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $p \to q$ \\
+        & $q \to r$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}}& $p \to q$ \\
+        & $q \to r$ \\\cline{2-2}    $\therefore$         & \ $p \to r$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the disjunctive syllogism implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $p \vee q$ \\
+        & $\neg p$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}}& $p \vee q$ \\
+        & $\neg p$ \\\cline{2-2}    $\therefore$         & \ $q$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the resolution implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $p \vee q$ \\
+        & $\neg p \vee r$ \\
+        \cline{2-2}    $\therefore$  & ???
+        \end{tabular}
+        }
+    \xfield{
+        \begin{tabular}{c@{\,}l@{}}
+        & $p \vee q$ \\
+        & $\neg p \vee r$ \\
+        \cline{2-2}    $\therefore$         & \ $q \vee r$ \\  \end{tabular}
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does $p \to q$ implies ?}
+    \xfield{$\neg p \to \neg q$}
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the universal generalization implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $P(x)$ for all $x \in D$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{ \begin{tabular}{c@{\,}l@{}}& $P(x)$ for all $x \in D$ \\\cline{2-2}    $\therefore$         & \ $\forall x P(x)$ \\  \end{tabular}}
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the universal specialization implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $\forall x$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{ \begin{tabular}{c@{\,}l@{}}& $\forall x$ \\\cline{2-2}    $\therefore$         & \ $P(d)$ for any $d \in D$ \\  \end{tabular}}
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the existential generalization implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $P(d)$ for some $d \in D$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{ \begin{tabular}{c@{\,}l@{}}& $P(d)$ for some $d \in D$ \\\cline{2-2}    $\therefore$         & \ $\exists x P(x)$ \\  \end{tabular}}
+\end{note}
+
+\begin{note}
+    \xfield{
+        What does the existential simplification implies ? (Rule of inference in propositional logic) \begin{tabular}{c@{\,}l@{}}
+        & $\exists x P(x)$ \\\cline{2-2}    $\therefore$         & \ ??? \\  \end{tabular}
+    }
+    \xfield{ \begin{tabular}{c@{\,}l@{}}& $\exists x P(x)$ \\\cline{2-2}    $\therefore$         & \  $P(d)$ for some $d \in D$ \\  \end{tabular}}
+\end{note}
+
+\begin{note}
+    \xfield{What is the $\mathcal P \left({A}\right)$ (powerset of A)}
+    \xfield{It is the set that consist of all subset of A eg :Let $A = \{1,2,3\}$, then $\mathcal P \left({A}\right)\ =\ (\varnothing,\{1,2,3\},\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\}\}$}
+\end{note}
+
+\begin{note}
+    \xfield{
+        Define the cartesian product of two sets.
+        Define its cardinality.
+    }
+    \xfield{
+        Let $A$ and $B$ two sets,\\
+        $A \times B\ =\ \{(a,b) : a \in A \wedge b \in B\}$\\
+        Eg : $A =\{1,2\} B = \{3,4\}$\\
+        $A \times B = \{(1,3),(1,4),(2,3),(2,4)\}$\\
+        $\left\vert A \times B\right\vert = \left\vert A \right\vert \cdot \left\vert B \right\vert $
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What is the condition for two sets to have the same cardinality ?}
+    \xfield{For $\left\vert A \right\vert = \left\vert B \right\vert $ to be true, there must exist a bijection $f\ :\ A \to B$ }
+\end{note}
+
+\begin{note}
+    \xfield{What is $\left\vert \mathbb{N} \right\vert$}
+    \xfield{ $\left\vert \mathbb{N} \right\vert =  \aleph_0$}
+\end{note}
+
+\begin{note}
+    \xfield{What are the conditions for a set to be countable ?}
+    \xfield{A set is countable if it is finite or if there exist a bijection with $\mathbb{N}$}
+\end{note}
+
+\begin{note}
+    \xfield{$\sum_{i=0}^{k} i = ?$}
+    \xfield{$\sum_{i=0}^{k} i = \frac{k(k+1))}{2}$}
+\end{note}
+
+\begin{note}
+    \xfield{$\sum_{i=0}^{k} r^i = ?$}
+    \xfield{$\sum_{i=0}^{k} r^i = \frac{r^{k+1} - 1}{r - 1}$}
+\end{note}
+
+\begin{note}
+    \xfield{What does $x \to \llcorner x \urcorner$ mean ?}
+    \xfield{round to closest integer (if $\frac{1}{2}$, then round down)}
+\end{note}
+
+\begin{note}
+    \xfield{What does $x \to \lfloor x \rfloor$ mean ?}
+    \xfield{map to largest integer $\le x$}
+\end{note}
+
+\begin{note}
+    \xfield{What does $x \to \lceil x \rceil$ mean ?}
+    \xfield{map to smallest integer $\ge x$}
+\end{note}
+
+\begin{note}
+    \xfield{What does $x \to [ x]$ mean ?}
+    \xfield{map to integer part}
+\end{note}
+
+\begin{note}
+    \xfield{What does $f(x) = \mathcal{O}(g(x))$ means ?}
+    \xfield{
+        We say that  $f(x) = \mathcal{O}(g(x))$ if \\
+        $\exists k,c \in \mathbb{R}$ s.t. $\forall x \ge k\ \left\vert f(x)\right\vert \le c \cdot \left\vert g(x)\right\vert $ \\
+        $\left\vert g(x)\right\vert$ is up to a constant factor \underline{eventually} an upper bound of $\left\vert f(x)\right\vert $
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does $f(x) = \Omega(g(x))$ means ?}
+    \xfield{
+        We say that  $f(x) = \Omega(g(x))$ if \\
+        $\exists k,c > 0 \in \mathbb{R}$ s.t. $\forall x \ge k\ \left\vert f(x)\right\vert \ge c \cdot \left\vert g(x)\right\vert $ \\
+        $\left\vert g(x)\right\vert$ is up to a constant factor \underline{eventually} a lower bound of $\left\vert f(x)\right\vert $
+    }
+\end{note}
+
+\begin{note}
+    \xfield{What does $f(x) = \Theta(g(x))$ means ?}
+    \xfield{We say that $f(x) = \Theta(g(x))$ if $\{f(x)\ is\ \mathcal{O}(g(x))\} \wedge \{f(x)\ is\ \Omega (g(x))\}$We say that $f(x) = \Theta(g(x))$ if $\{f(x)\ is\ \mathcal{O}(g(x))\} \wedge \{f(x)\ is\ \Omega (g(x))\}$}
+\end{note}
+
+\begin{note}
+    \xfield{What does $f(x) = o(g(x))$ means ?}
+    \xfield{We say that $f(x) = o(g(x))$ if $\lim\limits_{x \to \infty} \frac{\left\vert f(x) \right\vert}{\left\vert g(x) \right\vert} = 0$}
+\end{note}
+
+\end{document}
