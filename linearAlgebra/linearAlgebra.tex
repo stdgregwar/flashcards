@@ -62,7 +62,8 @@
 
 \begin{note}
     \xfield{Define the condition for a matrix \begin{math}A \in \mathbb{R}^{n\cdot n} \end{math} to be invertible}
-    \xfield{Invertible if there exists a \begin{math}C \in \mathbb{R}^{n\cdot n}\ s.t.\ CA = I\ \text{and}\ AC = I\end{math}}
+    \xfield{Invertible if there exists a \begin{math}C \in \mathbb{R}^{n\cdot n}\ s.t.\ CA = I\ \text{and}\ AC = I\end{math}\\
+    The rank($A$) also needs to be equal to n}
 \end{note}
 
 \begin{note}
@@ -78,6 +79,220 @@
 \begin{note}
     \xfield{Give the definition of being one-to-one (injective) for a transformation $T : X \rightarrow Y$ and how it translates when the matrix is in echelon form}
     \xfield{T is one-to-one if for every \begin{math}y \in Y\end{math} there is \underline{at most one} \begin{math}x \in X \text{s.t.} T(x)=y\end{math} In echelon form, it means that \#pivots = \#vars}
+\end{note}
+
+\begin{note}
+\xfield{How to find the inverse of the matrix $A$ using row reduction ?}
+\xfield{Row reduce $(A\lvert I) \rightarrow \cdots \rightarrow (I \lvert A^{-1})$}
+\end{note}
+
+\begin{note}
+\xfield{How to invert the following matrix  $ A = \left(
+    \begin{array}{c|c}
+      A_{11}&A_{12}\\\cline{1-2}
+      0&A_{22}
+    \end{array}
+  \right)$}
+\xfield{$A^{-1} \left(
+    \begin{array}{c|c}
+      A^{-1}_{11}&-A^{-1}_{11}A_{12}A^{-1}_{22}\\\cline{1-2}
+      0&A^{-1}_{22}
+    \end{array}
+  \right)$}
+\end{note}
+
+\begin{note}
+\xfield{How to $LU$ factorize a matrix}
+\xfield{Let's show an example : $A =  \left(
+    \begin{array}{cccc}
+      2&4&-1&-2\\
+      -4&-5&3&1\\
+      2&-5&-3&8
+    \end{array}
+  \right)$ \\
+  Reduce A to echelon form U (i.e. using only the follwing : adding a multiple of a row to a row below.)\\
+$\left(
+    \begin{array}{cccc}
+      \cline{1-1}
+      \multicolumn{1}{|c}2&\multicolumn{1}{|c}4&-1&-2\\
+      \multicolumn{1}{|c}-4&\multicolumn{1}{|c}-5&3&1\\
+      \multicolumn{1}{|c}2&\multicolumn{1}{|c}-5&-3&8\\
+      \cline{1-1}
+    \end{array}
+  \right) \sim \left(
+    \begin{array}{cccc}
+      2&4&-1&-2\\
+      \cline{2-2}
+      0&\multicolumn{1}{|c}3&\multicolumn{1}{|c}1&-3\\
+      0&\multicolumn{1}{|c}-9&\multicolumn{1}{|c}-2&10\\
+      \cline{2-2}
+    \end{array}
+  \right) \sim \left(
+    \begin{array}{cccc}
+      2&4&-1&-2\\
+      0&3&1&-3\\
+      \cline{3-3}
+      0&0&\multicolumn{1}{|c}1&\multicolumn{1}{|c}1\\
+      \cline{3-3}
+    \end{array} 
+  \right) = U$ \\
+  Then to find L your need to "normalize" the squared values : $\begin{matrix}
+  \cline{1-1}
+\multicolumn{1}{|c|}2 &\\
+\cline{2-2}
+\multicolumn{1}{|c|}{-4} & \multicolumn{1}{|c|}3 \\ 
+\cline{3-3}
+\multicolumn{1}{|c|}2 &\multicolumn{1}{|c|} {-9} &\multicolumn{1}{|c|} 1\\
+\cline{1-3}\\
+/2 & /3
+\end{matrix}\ \ \rightarrow L = \left(
+    \begin{array}{ccc}
+      1&0&0\\
+      -2&1&0\\
+      1&-3&1
+    \end{array}
+  \right)$ }
+\end{note}
+
+\begin{note}
+\xfield{Define what it means that $V$ is a subspace of $W$}
+\xfield{$V$ has to satisfy the three following properties :\\
+\begin{enumerate}
+\item $0 \in V$
+\item $\forall x,y \in V$ $\rightarrow$ $x + y \in V$
+\item $\forall x \in V$ $\rightarrow$ $c \in \mathbb{R}$, $c \cdot x \in V$
+\end{enumerate} }
+\end{note}
+
+\begin{note}
+\xfield{Give the definition the column space of $A$ and how to find a basis for it.}
+\xfield{The column space of $A$ denoted by Col($A$) is the set of all linear combination of the columns\\
+to find a basis, your have to row reduce $(A|0)$ the columns with pivots forms the basis}
+\end{note}
+
+\begin{note}
+\xfield{Give the definition the column space of $A$ and how to find a basis for it.}
+\xfield{The nulspace of $A$ denoted by Nul($A$) is the set of all solutions of the equation $Ax=0$\\
+You can find it by row reducing $(A|0)$ and treat it like a parametric equation. If there are free variables, it will give you a basis.}
+\end{note}
+
+\begin{note}
+\xfield{Howto you compute the determinant of the matrix $A \in \mathbb{R}^{nxn}$}
+\xfield{To find det($A$) = $\begin{vmatrix}
+ 	  a_{11}&\cdots&a_{1j}&\cdots&a_{1n}\\
+      \vdots&\ddots&\vdots&\ddots&\vdots\\
+      a_{i1}&\cdots&a_{ij}&\cdots&a_{in}\\
+      \vdots&\ddots&\vdots&\ddots&\vdots\\
+      a_{n1}&\cdots&a_{nj}&\cdots&a_{nn}\\
+\end{vmatrix}$ \\First let's give the following notation : $A_{ij}$ is the matrix obtained from $A$ after having removed the $i$th row and the $j$th column.\\
+Then, we know that det$A = a_{11}$det$A_{11} - a_{12}$det$A_{12} +a_{13}$det$A_{13} - \cdots + (-1)^{n+1} a_{1n}$det$A_{1n}$\\
+From that and from the fact that $\begin{vmatrix}
+a&b\\
+c&d
+\end{vmatrix} = ad-bc$ we can recursively find the determinant of the matrix A. 4}
+\end{note}
+
+\begin{note}
+	\xfield{Give the effects of the elementary row operations on the determinant of the matrix $A = [a]_n \in \mathbb{R}^{n\times n}$}
+	\xfield{$(1): \quad$ Applying $r_i \to ar_i$ has the effect of multiplying $\det \left({\mathbf A}\right)$ by $a$.\\
+$(2): \quad$ Applying $r_i \to r_i + ar_j$ has no effect on $\det \left({\mathbf A}\right)$.\\
+$(3): \quad$ Applying $r_i \leftrightarrow r_j$ has the effect of multiplying $\det \left({\mathbf A}\right)$ by $-1$.}
+\end{note}
+
+\begin{note}
+	\xfield{Give the result of the following equalitites :\\
+	\begin{enumerate}
+	\item det$(I_n) =$ ? where $I_n$ is the $n \times n$ identity matrix.
+	\item det$(A^T) =$ ?
+	\item det$(A^-1) =$ ?
+	\item For square matrix $A$ and $B$ of equal size\\
+	det$(AB) =$ ?
+	\item det$(cA) =$ ? for a $n \times n$ matrix
+	\item If $A$ is a triangular matrix, what is the determinant ?
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+	\item det$(I_n) = 1$ where $I_n$ is the $n \times n$ identity matrix.
+	\item det$(A^T) =$ det$(A)$
+	\item det$(A^-1) = \frac{1}{\text{det}(A)} = \text{det}(A)^{-1}$
+	\item For square matrix $A$ and $B$ of equal size\\
+	det$(AB) = \text{det}(A)\text{det}(B)$
+	\item det$(cA) = c^n$ det$(A)$ for a $n \times n$ matrix
+	\item If $A$ is a triangular matrix, the determinant is equal to the sum of the product of the diagonal entries.
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{Consider a system of $n$ linear equations for $n$ unknowns, represented in matrix multiplication form as follows:\\
+	$Ax = b$\\
+	Solve it using the cramer's rule.}
+	\xfield{Consider a system of $n$ linear equations for $n$ unknowns, represented in matrix multiplication form as follows:\\
+	$Ax = b$\\
+where the $n$ by $n$ matrix $ A $ has a nonzero determinant, and the vector $ x = (x_1, \ldots, x_n)^\mathrm{T} $ is the column vector of the variables.\\
+Then the theorem states that in this case the system has a unique solution, whose individual values for the unknowns are given by:\\
+:$ x_i = \frac{\det(A_i)}{\det(A)} \qquad i = 1, \ldots, n \, $\\
+where $ A_i $ is the matrix formed by replacing the ''i''th column of $ A $ by the column vector $ b $.}
+\end{note}
+
+\begin{note}
+	\xfield{Consider the $3\times 3$ matrix\\
+$\mathbf{A} = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}$\\
+How to compute its adjugate ?}
+	\xfield{Consider the $3\times 3$ matrix :
+$\mathbf{A} = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}$\\
+Its adjugate is the transpose of the cofactor matrix\\
+$\mathbf{C} = \begin{pmatrix}
++\left| \begin{matrix} a_{22} & a_{23} \\ a_{32} & a_{33}  \end{matrix} \right| &
+-\left| \begin{matrix} a_{21} & a_{23} \\ a_{31} & a_{33}  \end{matrix} \right| &
++\left| \begin{matrix} a_{21} & a_{22} \\ a_{31} & a_{32}  \end{matrix} \right| \\
+ & & \\
+-\left| \begin{matrix} a_{12} & a_{13} \\ a_{32} & a_{33} \end{matrix} \right| &
++\left| \begin{matrix} a_{11} & a_{13} \\ a_{31} & a_{33} \end{matrix} \right| &
+-\left| \begin{matrix} a_{11} & a_{12} \\ a_{31} & a_{32} \end{matrix} \right| \\
+ & & \\
++\left| \begin{matrix} a_{12} & a_{13} \\ a_{22} & a_{23} \end{matrix} \right| &
+-\left| \begin{matrix} a_{11} & a_{13} \\ a_{21} & a_{23} \end{matrix} \right| &
++\left| \begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right|
+\end{pmatrix}$\\
+$\mathbf{C}^T = \operatorname{adj}(\mathbf{A}) = \begin{pmatrix}
++\left| \begin{matrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{matrix} \right| &
+-\left| \begin{matrix} a_{12} & a_{13} \\ a_{32} & a_{33}  \end{matrix} \right| &
++\left| \begin{matrix} a_{12} & a_{13} \\ a_{22} & a_{23} \end{matrix} \right| \\
+ & & \\
+-\left| \begin{matrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{matrix} \right| &
++\left| \begin{matrix} a_{11} & a_{13} \\ a_{31} & a_{33} \end{matrix} \right| &
+-\left| \begin{matrix} a_{11} & a_{13} \\ a_{21} & a_{23}  \end{matrix} \right| \\
+ & & \\
++\left| \begin{matrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{matrix} \right| &
+-\left| \begin{matrix} a_{11} & a_{12} \\ a_{31} & a_{32} \end{matrix} \right| &
++\left| \begin{matrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{matrix} \right|
+\end{pmatrix}$\\
+where\\
+$\left| \begin{matrix} a_{im} & a_{in} \\ \,\,a_{jm} & a_{jn} \end{matrix} \right|=
+\det\left(    \begin{matrix} a_{im} & a_{in} \\ \,\,a_{jm} & a_{jn} \end{matrix} \right)$.
+}
+\end{note}
+
+\begin{note}
+	\xfield{How to compute :
+	\begin{itemize}
+		\item dim(Col($A$))
+		\item dim(Row($A$))
+		\item dim(Nul($A$))
+	\end{itemize}
+	of $A \in \mathbb{R}^{n\times n}$ }
+	\xfield{\begin{itemize}
+		\item dim(Col($A$)) = rank($A$)
+		\item dim(Row($A$)) = rank($A^T$)
+		\item dim(Nul($A$)) = n - rank($A$)
+	\end{itemize}}
 \end{note}
 
 \end{document}
