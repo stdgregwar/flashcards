@@ -264,4 +264,74 @@
     \xfield{We say that $f(x) = o(g(x))$ if $\lim\limits_{x \to \infty} \frac{\left\vert f(x) \right\vert}{\left\vert g(x) \right\vert} = 0$}
 \end{note}
 
+\begin{note}
+	\xfield{Define the pigeonhole principle}
+	\xfield{If $n$ objects are distributed over $m$ places, and if $n > m$, then some place receives at least two objects}
+\end{note}
+
+\begin{note}
+	\xfield{What is Fermat's little theorem}
+	\xfield{Let $p$ be prime, then $\forall a \in \mathbb{Z},\ a^p \equiv a\ mod\ p$}
+\end{note}
+
+\begin{note}
+	\xfield{}
+	\xfield{}
+\end{note}
+
+\begin{note}
+	\xfield{Define the mathematical induction and the strong induction :}
+	\xfield{\begin{itemize}
+		\item $(P(0) \wedge \forall n \in \mathbb{N}_{\ge 0} P(n) \rightarrow P(n+1)) \rightarrow \forall n \in \mathbb{N}_{\ge 0} P(n)$
+		\item $(P(0) \wedge \forall n \in \mathbb{N}_{\ge 0} P(1) \wedge P(2)\wedge ... \wedge P(n) \rightarrow P(n+1)) \rightarrow \forall n \in \mathbb{N}_{\ge 0} P(n)$
+	\end{itemize} }
+\end{note}
+
+\begin{note}
+Counting :
+	\xfield{\begin{enumerate}
+		\item Define the product rule
+		\item Define the sum rule
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item Ff a task can be accomplished by first doing task $A$ and then task $B$, what $A$ does can be done in $a$ ways and $B$ in $b$ ways and there is no depedence between $A$ and $B$, then the overall task can be done in $a\cdot b$ ways. 
+		\item If a task can be accomplished by either doing $A$ \underline{or} (exclusive) $B$, then the overall task can be done in $a+b$ steps.
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	How may ways are there to pick objects from a set of size n ?
+	\xfield{\begin{enumerate}
+		\item If the order matters and the repetitions aren't allowed
+		\item If the order matters and the repetitions are allowed
+		\item If the order doesn't matter and the repetitions aren't allowed
+		\item If the order doesn't matter and the repetitions are allowed
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item Permutation without repetition :\\
+			$P(n,r) = \frac{n\cdot(n-1)\cdot(n-2)\cdot ...\cdot(n-r+1)\cdot(n-r)\cdot ...\cdot 2\cdot 1}{(n-r+1)\cdot (n-r)\cdot ... \cdot 2 \cdot 1} = \frac{n!}{(n-r)!}$
+		\item Combination without repetition :\\
+		$C(n,r) = \binom{n}{r}\ (=\frac{n!}{(n-r)!r!})$
+		\item Permutation with repetition :\\
+		$n\cdot n\cdot n \cdot n \cdot ... \cdot n = n^r$
+		\item Combination with repetition :\\
+		$\binom{r+n-1}{n-1} = \frac{(r+n-1)!}{(r+(n-1)-(n-1))!(n-1)!} = \frac{(r+n-1)!}{r!(n-1)!} = \binom{r+n-1}{r}$
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{\begin{itemize}
+	\item Give Pascal's identity for $\binom{n}{k}$
+	\item Give Vandermonde's identity for $\binom{m+n}{r}$
+	\item $\binom{n}{r}\binom{r}{k}$ ?
+	\end{itemize} }
+	\xfield{\begin{itemize}
+	\item $\binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}$
+	\item  $\binom{m+n}{r} = \sum\limits^{r}_{k=0} \binom{n}{r-k}\binom{m}{k}$
+	\item $\binom{n}{r}\binom{r}{k}=\binom{n}{k}\binom{n-k}{r-k}$
+	\end{itemize} }
+\end{note}
+
+
+
 \end{document}
