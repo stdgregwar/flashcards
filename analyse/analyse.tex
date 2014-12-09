@@ -71,7 +71,7 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
         \underline{majorant :} $a\ \in \mathbb{R}$ est un majorant de $A\ \subset\ \mathbb{R},\ A\ \neq\ \varnothing$ si $a\ \ge\ x,\ \forall x\ \in\ A$.\\
         \underline{minoré ou borné inférieurement:} $A\ \subset\ \mathbb{R}$ est minoré si $A$ admet un minorant.\\
         \underline{majoré ou borné supérieurement:} $A\ \subset\ \mathbb{R}$ est majoré si $A$ admet un majorant.\\
-        \underline{borné :} $A\ \subset\ \mathbb{R},\ A\ \neq\ \varnothing$ est borné si A est majoré et minoré.}
+        \underline{borné :} $A\ \subset\ \mathbb{R},\ A\ \neq\ \varnothing$ est borné Si $A$ est majoré et minoré.}
 \end{note}
 
 \begin{note}
@@ -84,7 +84,7 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
         \begin{center}
               $a\ =\ inf(A)$,\\
         \end{center}
-        si a est le plus grand minorant de A, c'est-à-dire, si tout minorant b de A satifsait b $\le$ a\\    
+        Si $A$ est le plus grand minorant de A, c'est-à-dire, si tout minorant b de A satifsait b $\le$ a\\    
         \underline{Minimum : }\\
         $si\ a=inf(A)\ \in A,\ alors\ inf(A)\ =:\ min(A)$ }
 \end{note}
@@ -97,7 +97,7 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
     \xfield{
         \underline{supremum : } un majorant de $a \in\ \mathbb{R}$ est appelé supremum ou borne supérieure de $A\ \subset\ \mathbb{R},\ A\ \neq\ \varnothing$, noté : \\
                 $a\ =\ sup(A)$,\\
-        si a est le plus petit majorant de A, c'est-à-dire, si tout majorant b de A satifsait b $\ge$ a.\\        
+        Si $A$ est le plus petit majorant de A, c'est-à-dire, si tout majorant b de A satifsait b $\ge$ a.\\        
         \underline{Maximum : }\\
         $si\ a=sup(A)\ \in A,\ alors\ sup(A)\ =:\ max(A)$.
     }
@@ -137,6 +137,18 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
         \underline{Points limites}\\
         $\text{\{points limites\}}\ =\ \overline{E}\ \backslash\ \text{\{points isolés\}}\ =\ \{\ a\ \in\ \mathbb{R}\ :\ \forall r >0,\ ]a-r,\ a+r[\ \cap\ (E\ \backslash\ \{a\})\ \neq\ \varnothing \}$
     }
+\end{note}
+
+\begin{note}
+	\xfield{Comment exprimer $z=a-ib$ en forme polaire.
+	\\exprimer $1-\sqrt{3}i$ en forme polaire}
+	\xfield{La forme polaire de $z$ s'écrit comme $z= \vert z \vert e^{i \varphi}$ \\
+	où $\vert z \vert = \sqrt{a^2+b^2}$\\
+	et $\varphi = 2 \cdot \arctan(\frac{b}{a+\vert z \vert})$ si $y \neq 0$ ou si $x > 0 et y = 0$, sinon $\varphi = \pi$\\
+	Pour $z = 1-\sqrt{3}i$\\
+	$\vert z \vert = \sqrt{1^2+\sqrt{3}^2} = 2$\\
+	et $\varphi =  2 \cdot \arctan(\frac{\sqrt{3}}{1+2}) = 2 \cdot = \arctan(\frac{1}{\sqrt{3}})=2 \cdot \frac{\pi}{6} = \frac{\pi}{3}$\\
+	donc $z= 2 e^{i \frac{\pi}{3}}$}
 \end{note}
 
 \begin{note}
@@ -365,8 +377,8 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
 \end{note}
 
 \begin{note}
-    \xfield{$\lim\limits_{x\to1}\frac{\ln(x)}{x-1}=$ ? \\$\mbox{For } a > 1: \,$\\$\lim\limits_{x \to 0^+} \log_a x = $ ?\\$\lim\limits_{x \to \infty} \log_a x = $ ?\\$\lim\limits_{x \to -\infty} a^x = $ ?\\$\mbox{If } a < 1: \,$\\$\lim\limits_{x \to -\infty} a^x =$ ?}
-    \xfield{$\lim\limits_{x\to1}\frac{\ln(x)}{x-1}=1$\\$\mbox{For } a > 1: \,$\\$\lim\limits_{x \to 0^+} \log_a x = -\infty$\\$\lim\limits_{x \to \infty} \log_a x = \infty$\\$\lim\limits_{x \to -\infty} a^x = 0$\\$\mbox{If } a < 1: \,$\\$\lim\limits_{x \to -\infty} a^x = \infty$}
+    \xfield{$\lim\limits_{x\to1}\frac{\ln(x)}{x-1}=$ ?\\$\lim\limits_{x\to \infty} \frac{ln(x)}{x^p}= $ ?\\$\lim\limits_{x \to \infty}(1+\frac{a}{x})^x = ?$\\$\lim\limits_{x \to \infty} \sqrt[x]{a} =$ ?\\$\mbox{For } a > 1: \,$\\$\lim\limits_{x \to 0^+} \log_a x = $ ?\\$\lim\limits_{x \to \infty} \log_a x = $ ?\\$\lim\limits_{x \to -\infty} a^x = $ ?\\$\mbox{If } a < 1: \,$\\$\lim\limits_{x \to -\infty} a^x =$ ?}
+    \xfield{$\lim\limits_{x\to1}\frac{\ln(x)}{x-1}=1$\\$\lim\limits_{x\to \infty} \frac{ln(x)}{x^p}= 0$ si $p>0$\\$\lim\limits_{x \to \infty}(1+\frac{a}{x})^x = e^a$\\$\lim\limits_{x \to \infty} \sqrt[x]{a} = 1$ for $a > 0$\\$\mbox{For } a > 1: \,$\\$\lim\limits_{x \to 0^+} \log_a x = -\infty$\\$\lim\limits_{x \to \infty} \log_a x = \infty$\\$\lim\limits_{x \to -\infty} a^x = 0$\\$\mbox{If } a < 1: \,$\\$\lim\limits_{x \to -\infty} a^x = \infty$}
 \end{note}
 
 \begin{note}
@@ -394,6 +406,21 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
         Une suite ($a_n$, $a_n \in \mathbb{R}$) est une suite de Cauchy, si pour tout $\epsilon > 0$ il existe $n_0 \in \mathbb{N}$, tel que pour tout $n,m \ge n_0$, $ | a_n - a_m | < \epsilon$\\
         Aussi, une suite $a_n$ de \underline{nombres réels} est de Cauchy, si et seulement si $a_n$ est une suite convergente
     }
+\end{note}
+
+\begin{note}
+	\xfield{Qu'est cela signifie si une série $\sum\limits^{\infty}_{k=1} a_k$ converge absolument ?}
+	\xfield{Si $\sum\limits^{\infty}_{k=1} a_k$ converge absolument, alors $\sum\limits^{\infty}_{k=1} \vert a_k\vert$ converge }
+\end{note}
+
+\begin{note}
+	\xfield{Donner le critère nécessaire à la converge de la série $\sum\limits^{\infty}_{k=1} a_k$}
+	\xfield{$\sum\limits^{\infty}_{k=1} a_k$ $\Rightarrow$ $\lim\limits_{k\to \infty}a_k = 0$}
+\end{note}
+
+\begin{note}
+	\xfield{Donner le critère de Leibniz pour la convergence d'une série alternée $a_k$}
+	\xfield{Si $a_k$ est une série alternée ( $(-1)^k a_k \ge 0 ou \le 0$ pour tout $k$ ) et si $\vert a_k \vert$ est strictement décroissante ($\vert a_{k+1} \vert < \vert a_k \vert$ pour tout $k$) alors la série $\sum\limits^{\infty}_{k=1} a_k$ converge}
 \end{note}
 
 \begin{note}
@@ -532,6 +559,75 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 		\item Si $f'$ est décroissante sur $I_0$ (en particulier si $f'' \le 0$ sur $I_0$), alors f est concave sur $I_0$ 
 		\item Si $f''(x_0) = 0$ alors $x_0$ est un point d'inflexion
 	\end{itemize} }
+\end{note}
+
+\begin{note}
+	\xfield{$(f^{-1})'$ (dérivée de la fonction réciproque) ?}
+	\xfield{$(f^{-1})' =  \frac{1}{f'(f^{-1})}$}
+\end{note}
+
+\begin{note}
+\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+\begin{enumerate}
+\item Si sup $A \in A$ et inf $A \in A$, alors $A$ est fermé.\\
+\item Si $A$ est fermé, alors sup $A \in A$ et inf $A \in A$.\\
+\item Si $A$ est fermé et borné, alors sup $A \in A$ et inf $A \in A$.\\
+\item Si $A$ est majoré, alors sup $A$ est un point adhérent de $A$.\\
+\item Si $A$ est minoré, alors inf $A$ est un point limite de $A$.\\
+\item Si sup $A \not\in A$ et inf $A \not\in A$, alors A est ouvert.\\
+\item Si $A$ est ouvert, alors inf $A \not\in A$ et sup $A \not\in A$.\\
+\item Si $A$ est ouvert, alors son bord $\partial A$ est vide.
+\end{enumerate} }
+\xfield{\begin{enumerate}
+\item FAUX.
+Prendre par exemple $A = [0, 1[ \cup ]1, 2]$. La proposition serait vraie pour un intervalle.\\
+\item FAUX.
+Prendre par exemple $A = [1, \infty[$ . \\
+\item VRAI.
+Comme $A$ est borné, on a $a := inf A > -\infty$ et $b := sup A < \infty$. Par l’absurde, supposons
+que $a \not\in A$, ainsi $a \in \mathbb{R} \ A$ qui est un ouvert. Par conséquent il existe $r > 0$ tel que $]a - r, a + r[ \subset R \ A$, ou autrement dit $]a - r, a + r[ \cap A = \varnothing$. Ainsi $a + r$ est un minorant de $A$, ce qui contredit le fait que $a$ est le plus grand minorant. Idem pour $b = sup A$.\\
+\item VRAI.
+Par l’absurde, supposons que $b := sup A$ n’est pas adhérent à $A$. Il existe ainsi $r > 0$ tel
+que $]b - r, b + r[ \cap A = \varnothing$ et donc $b - r$ est un majorant de $A$. Cela contredit le fait que $b$ est le plus petit majorant.\\
+\item FAUX.
+Prendre par exemple $A = \{1\}$ qui est minoré mais n’a pas de points limites.\\
+\item FAUX.
+Prendre par exemple $A = ]0, 1] \cup [2, 3[$ .
+\item VRAI.
+Par l’absurde, supposons que $a = inf A \in A$. Comme $A$ est ouvert, il existe $r > 0$ tel que
+$]a - r, a + r[ \subset A$. Donc $a - 2 r \in A$, ce qui contredit le fait que $a$ est un minorant de $A$.
+Idem pour $b = sup A$.\\
+\item FAUX.
+Prendre par exemple $A = ]0, 1[$. Ainsi $\partial A = \{0, 1\}$.
+\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{Vrai ou faux ?\\
+	Soient $f,\ g : \mathbb{R} \to \mathbb{R}$ deux fonctions.
+	\begin{enumerate}
+	\item Si $f$ est strictement monotone, alors $f$ est injective.
+	\item Si $f$ est injective, alors $f$ est monotone.
+	\item Si $f$ est bijective et croissante, alors son inverse $f^{-1}$ est décroissante.
+	\item Si $f\circ g$ est décroissante, alors $f$ et $g$ sont décroissantes.
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+	\item VRAI. Soient $x_1 , x_2 \in \mathbb{R}$ tels que $x_1 < x_2$ . Si f est strictement croissante, on a $f (x_1 ) < f (x_2 )$ et si $f$ est strictement décroissante, on a $f(x_1 ) > f(x_2 )$. Dans les deux cas $f(x_1) \neq = f(x_2)$, c.-à-d. f est injective.
+	\item FAUX. Prendre par exemple $f(x) = 2[x] - x + 1$. Soient $x_1 , x_2 \in \mathbb{R}$ tels que $f(x_1 ) = f(x_2 )$.\\
+	Alors $2[x_1] - x_1 + 1 = 2[x_2] - x_2 + 1 \Rightarrow 2([x_1)-[x_2]) = x_1 - x_2$\\
+	$\Rightarrow x_1 - x_2 = 2k$ avec $k \in \mathbb{Z}$.\\
+Ainsi $f(x_1 ) = f(x_2 + 2k) = 2[x_2 + 2k] - (x_2 + 2k) + 1$ \\
+$= 2([x_2 ] + 2k) - (x_2 + 2k) + 1$\\
+$= 2[x_2 ] + 2k - x_2 + 1 = f(x_2 ) + 2k.$\\
+Or, $f(x_1 ) = f(x_2 )$ par hypothèse, si bien que $k = 0$ et donc $x_1 = x_2$ . Ainsi $f$ est bien
+injective. Mais $f$ n’est pas monotone parce qu’on a par exemple $f(0) = 1 > f(\frac{1}{2}) = \frac{1}{2}$, mais $f(0) = 1 < f(1) = 2$.
+\item FAUX.
+Prendre par exemple $f(x) = f^{-1} (x) = x$.
+\item FAUX.
+Prendre par exemple $f(x) = x$ et $g(x) = -x$. Alors $(f\circ g)(x) = -x$ est décroissante
+mais $f$ ne l’est pas.
+\end{enumerate}}
 \end{note}
 
 \end{document}
