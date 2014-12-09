@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{svg}
+\usepackage{multicol}
+\usepackage{textcomp}
+
+\title{Formulaire de physique}
+
+\begin{document}
+\section{Physique du point Matériel}
+
+\subsection{Noms de variables}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Grandeur & Qu'est-cequec'estquoi & Unités \\ 
+\hline 
+$M$ & Masse & $[kg]$ \\
+\hline
+$x(t)$ & Position en fonction du temps & $[m]$ \\ 
+\hline
+$v(t) = \dot{x}(t)$ & Vitesse & $[\frac{m}{s}]$ \\
+\hline
+$a(t) = \ddot{x}(t)$ & Acceleration Angulaire & $[\frac{rad}{s^2}]$ \\
+\hline
+$F_{cause}$ & Force associée à une cause & $[N] = [\frac{kg*m}{s^2}]$ \\
+\hline
+$p(t) = mv(t)$ & Quantité de mouvement & $[\frac{kg*m}{s}]$ \\
+\hline
+$E_{cin}$ & Energie cinétique du point & $[J] = [\frac{kg*m^2}{s^2}$ \\
+\hline
+\end{tabular}
+
+\subsection{Formules}
+
+$$\sum F_{ext} = ma$$
+
+\subsection{Systemes de coordonnées}
+\subsubsection{Coordonnées Sphériques}
+
+\begin{multicols}{3}
+
+\begin{align*}
+x & = \rho \sin \phi \cos \theta \\
+y & = \rho \sin \phi \sin \theta \\
+z & = \rho \cos \phi
+\end{align*}
+
+\columnbreak
+
+\includesvg[width = 0.3\textwidth]{sphere}
+
+\columnbreak
+
+
+\begin{align*}
+\rho   &= \sqrt{x^2+y^2+z^2}\\
+\phi &= \arccos(z/\rho)\\
+\theta &= \begin{cases}\arccos\frac{x}{\sqrt{x^2+y^2}} & \mathrm{si}\ y\geq{0} \\ 2\pi-\arccos\frac x{\sqrt{x^2+y^2}} & \mathrm{si}\ y < 0\end{cases}\\
+\theta &= \arctan(y/x)
+\end{align*}
+
+\end{multicols}
+
+Vecteur rayon et dérivées:
+
+\begin{align*}
+\vec{r} &= \rho \hat{e}_{\rho} \\
+\dot{\vec{r}} &= \dot{\rho}\hat{e}_{\theta} + \rho\dot{\phi}\sin\theta\hat{e}_{\phi} = \vec{v} \\
+\begin{split}
+\ddot{\vec{r}} &= \left( \ddot{\rho} - \rho\dot\theta^2 - \rho\dot\phi^2\sin^2\theta \right)\mathbf{\hat{e}_\rho} \\
+&+ \left( \rho\ddot\theta + 2\dot{\rho}\,\dot\theta - \rho\dot\phi^2\sin\theta\cos\theta \right) \mathbf{\hat{e}_\theta}\\
+&+ \left( \rho\ddot\phi\,\sin\theta + 2\dot{\rho}\,\dot\phi\,\sin\theta + 2 \rho\dot\theta\,\dot\phi\,\cos\theta \right) \mathbf{\hat{e}_\phi} 
+\end{split}
+\end{align*}
+
+\subsubsection{Coordonnées Cylindriques}
+
+\begin{multicols}{3}
+
+\begin{align*}
+x &= r  \cos\theta \\
+y &= r  \sin\theta \\
+z &= z
+\end{align*}
+
+\columnbreak
+
+\includesvg[width = 0.3\textwidth]{cylindre}
+
+\columnbreak
+
+\begin{align*}
+r & = \sqrt{x^2 + y^2}\\
+\theta & = \arctan\left({y \over x}\right) \\
+z & = z
+\end{align*}
+
+\end{multicols}
+
+\section{Physique du corps Solide}
+
+\subsection{Noms de variables}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Grandeur & Qu'est-cequec'estquoi & Unités \\ 
+\hline 
+$I$ & Repartition de la masse pondérée par la distance au carré & $[kg*m^2]$ \\ 
+\hline
+$\omega$ & Vitesse angulaire , vecteur parralèle à l'axe de rotation. & $[\frac{rad}{s}]$ \\ 
+\hline
+$L$ & Moment cinétique & $[\frac{kg*m^2}{s}]$ \\
+\hline
+$\alpha$ & Acceleration Angulaire & $[\frac{rad}{s^2}]$ \\
+\hline
+\end{tabular}
+
+\subsection{Formules}
+$\sum \vec{M_{ext}} = I\vec{\alpha}$ ,
+$\frac{d\vec{L}}{dt} = \sum \vec{M_{ext}}$,
+$\vec{v} = \vec{\omega} \times \vec{r}$,
+$\vec{a_t} = \vec{\alpha} \times \vec{r}$,
+$I = \sum \limits_M d^2 dm$,
+
+
+
+\end{document}
