@@ -407,6 +407,78 @@ mais $f$ ne l’est pas.}
 
 
 \begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable à gauche et à droit en $a \in \mathbb{R}$, alors $f$ est dérivable en $a$.}
+	\xfield{Faux. Prendre par exemple $f(x) = \vert x \vert$ qui n'est pas dérivable en 0. Les dérivées unilatérales en 0 existent mais elles ne sont pas égales.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable sur $I \subset\mathbb{R}$, alors $f'$ est continue $I$.}
+	\xfield{Faux. Prendre par exemple la fonction $f(x) = \left\{
+	 \begin{array}{ll}
+		x\sin(x)\sin(\frac{1}{x}  & \mbox{if } x \neq 0 \\
+		0 & \mbox{if } x = 0
+	\end{array}
+\right.$Alors $f$ est dérivable sur $]-1,1[$ (en fait, sur $\mathbb{R}$) mais sa dérivée n'est pas continue en 0.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable sur $\mathbb{R}$, alors $g(x) = \sqrt{f^2(x)}$ est dérivable sur $\mathbb{R}$.}
+	\xfield{Faux. En prenant $f(x) = x$, on a $g(x) = \sqrt{x^2} = \vert x \vert$ qui n'est pas dérivable en 0.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f(x) = x + e^x$, alors $(f^{-1})(1) = 1 + \frac{1}{e}$.}
+	\xfield{Faux. La formule pour la dérivée de la fonction réciproque est $(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$.\\
+	Ici on a $f'(x) = 1 + e^x$ et $f^{-1}(1) = 0$, puisque $f(0) = 1$. Ainsi \\
+	$(f^{-1})'(1) = \frac{1}{f'(0)} = \frac{1}{1 + e^0} = \frac{1}{2}$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f(x) = x^2 - 2x$, alors $(f\circ f)'(1) = 0$.}
+	\xfield{Vrai. On a $f'(1) = 2 -2 = 0$ et donc $(f\circ f)'(1) = f'(f(1))$. $f'(1)=0$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f: \mathbb{R} \to \mathbb{R}$ une fonction continue sur $[a,b] \subset D(f), a<b$ et dérivable sur $]a,b[.$\\
+	Si $\lim_{\substack{x\to a\\ x>a}} f'(x)$ existe, alors $f$ est dérivable à droite $a$ et $\lim_{\substack{x\to a\\ x>a}} f'(x) = f'_+(a)$}
+	\xfield{Vrai. Soit par $x\in ]a,b[$. Par le théorème des accroissements finis, il existe $c_x \in ]a,x[$ tel que $\frac{f(x)-f(a)}{x-a} = f'(c_x)$. Comme $\lim_{\substack{x\to a\\ x>a}} f'(x)$ existe par hypothèse et que $\lim_{\substack{x\to a\\ x>a}} c_x = a$, on a\\
+	$\lim_{\substack{x\to a\\ x>a}} f'(x) = \lim_{\substack{x\to a\\ x>a}} f'(c_x) = \lim_{\substack{x\to a\\ x>a}} \frac{f(x)-f(a)}{x-a} = f'_+(a)$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions dérivables sur $\mathbb{R}$ avec $g'(x) \neq 0$ pour tout $x \in \mathbb{R}$.
+	\begin{enumerate}
+		\item Si $\lim\limits_{x\to \infty} f(x) =\lim\limits_{x\to \infty} g(x) = \infty$, alors $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)} = \lim\limits_{x\to \infty} \frac{f'(x)}{g'(x)}$.
+		\item Si $\lim\limits_{x\to \infty} \frac{f'(x)}{g'(x)}$ n'existe pas, alors $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)}$ n'existe pas.
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item Faux. Prendre par exemple $f(x) = x + \sin(x)$ et $g(x) = x$. Dans ce cas on a $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)}=\lim\limits_{x\to \infty}\big(1+\frac{sin(x)}{x}\big) = 1$ mais $\frac{f'(x)}{g'(x)} = 1+ \cos(x)$ n'admet pas de limite à l'infini (et donc la dernière hyphotèse de Bernoulli-l'Hospital n'est pas satifsaite).
+		\item Faux. Prendre les fonctions de la question précédente.\\
+		\emph{Remarque}: Dans ce cas particulier (puisque $\lim\limits_{x\to \infty} f(x) = \lim\limits_{x\to \infty} g(x) = \infty$), l'affirmation est en quelque sorte une réciprogue de Bernoulli-l'Hospital qui est, comme vu à plusieurs reprises, en général fausse.
+	\end{enumerate} }
+\end{note}
+
+
+
+\begin{note}
 	\xfield{Calculer $sin(\frac{\pi}{4})$ et $cos(\frac{\pi}{4})$}
 	\xfield{On peut calculer facilement ces valeurs en prenant un triangle isocèle de côtés isocèles 1, il aura deux angles de $\frac{\pi}{4}$, un angle droit et une hypothénuse de $\sqrt{2}$ alors : \\
 	$\sin(\frac{\pi}{4}) = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$\\
@@ -947,7 +1019,13 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 		\item $f' < 0$ sur $]a,b[$ $\Rightarrow$ $f$ strictement décroissant sur $[a,b]$
 		\item Soit $[a,b]\ \subset D(f),\ b > a,\ f$ continue sur $[a,b]$, dérivable sur $]a,b[$.\\
 		Alors $f'=0$ sur $]a,b[ \Rightarrow f$ constante sur $[a,b]$
-		\item Soit 
+		\item Soit $f'(x_0)=0$, si $f''(x_0)<0$ f admet un maximum local en $x_0$,
+		si $f''(x_0)>0$ f admet un minimum local en $x_0$
+		\item Soit $f \mathbb{R} \to \mathbb{R}, [a,b] \subset D(f)$, $f$ continue sur $[a,b]$. Les points $x_0 \in [a,b]$ pour lesquels $f$ admet un extremum global sont éléments de : \begin{enumerate}
+			\item \{a,b\}
+			\item \{des points où $f'$ n'existe pas\}
+			\item \{ les points où $f'=0$ \}
+		\end{enumerate}
 		\item Si $f'$ est croissante sur $I_0$ (en particulier si $f'' \ge 0$ sur $I_0$), alors f est convexe sur $I_0$
 		\item Si $f'$ est décroissante sur $I_0$ (en particulier si $f'' \le 0$ sur $I_0$), alors f est concave sur $I_0$ 
 		\item Si $f''(x_0) = 0$ alors $x_0$ est un point d'inflexion
@@ -1034,6 +1112,95 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 \begin{note}
 	\xfield{Donner le développement en série entière de $(1+x)^\alpha$, $\alpha \in \mathbb{R}$}
 	\xfield{$(1+x)^\alpha = \sum\limits_{n=0}^{\alpha}{{\alpha \choose n}\, x^n}$}
+\end{note}
+
+\begin{note}
+	\xfield{Donner les primitives des fonctions suivantes :
+	\begin{enumerate}
+		\item $x^n$
+		\item $\frac{1}{x}$
+		\item $e^x$
+		\item $\ln(x)$
+		\item $\frac{f'(x)}{f(x)}$
+		\item $e^{x^2}2x$
+		\item $(nx^{n-1}+2x^{n+1})e^{x^2}$
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item $\frac{1}{n+1}x^{n+1} + C$, $n\neq 1, C\in \mathbb{R}$
+		\item $\ln(\vert x\vert ) + C$, $x \in \mathbb{R}^*$
+		\item $e^x + C$
+		\item $x\ln(x)-x+C$, $x>0$
+		\item $\ln(\vert f(x) \vert ) +C$
+		\item $e^{x^2}+C$
+		\item $x^n e^{x^2}+C$
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{Donner les primitives des fonctions suivantes :
+	\begin{enumerate}
+		\item $\cos(x)$
+		\item $\sin(x)$
+		\item $\tan(x) = \frac{\sin(x)}{\cos(x)}$
+		\item $\frac{1}{1+x^2}$
+		\item $\frac{f'(x)}{1+f(x)^2}$
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item $\sin(x) +C$
+		\item $-\cos(x) +C$
+		\item $-\ln(\vert \cos(x) \vert ) + C$, $x \in D(\tan)$
+		\item $\arctan(x) + C$
+		\item $\arctan(f(x)) +C$
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{Donner le théorème de la moyenne pour la fonction $f: \mathbb{R} \to \mathbb{R},\ [a,b] \subset D(f),\ b>a$, $f$ continue sur $[a,b]$.}
+	\xfield{Soit $f: \mathbb{R} \to \mathbb{R},\ [a,b] \subset D(f),\ b>a$, $f$ continue sur $[a,b]$. Alors il existe $u \in ]a,b[$. tel que\\
+	$\int_a^b f(x) \cdot dx = f(u) (b-a)$   $(=f(u) \int_a^b 1 \cdot dx$\\
+	$f(u) = \frac{1}{b-a} \int_a^b f(x) dx$ = valeur moyenne de $f$ sur $[a,b]$}
+\end{note}
+
+\begin{note}
+	\xfield{Donner le théorème fondamental du calcul intégral.}
+	\xfield{Soit $f: \mathbb{R} \to \mathbb{R},\ [a,b] \subset D(f)$, $f$ continue sur $[a,b]$. Alors 
+	\begin{itemize}
+		\item La fonction $G$ définie par $G(x) = \int_a^x f(t) dt$ est une primitive de $f$ sur $[a,b]$, c.-à-d. $G$ est dérivable sur $]a,b[$ et $G'(x) = f(x)$,c.-à-d.\\
+		$\frac{d}{dx}\left(\int_a^x f(t) dt\right) = f(x)$		$\forall x \in ]a,b[$.
+		\item Si $F$ est une primitive de $f$ sur $[a,b]$ alors \\
+		$\int_a^b f(x) dx = F(b) - F(a)$
+	\end{itemize} }
+\end{note}
+
+\begin{note}
+	\xfield{Donner le théorème d'intégration par changement de variable.}
+	\xfield{Soit $f: \mathbb{R} \to \mathbb{R},\ [a,b] \subset D(f)$, $f$ continue sur $[a,b]$.\\
+	Soit $\varphi : [\alpha,\beta] \to [a,b]$, $\varphi$ continûment dérivable sur $[\alpha,\beta]$, $\varphi(\alpha) = a$, $\varphi(\beta) = b$\\
+	Alors : $\int_a^b f(x) dx = \int_\alpha^\beta f(\varphi(u))\varphi'(u) du$\\
+	\emph{Remarque}: Si $\varphi$ est bijectif alors $F(x) = G(\varphi^{-1}(x))$ }
+\end{note}
+
+\begin{note}
+	\xfield{Donner le théorème d'intégration par partie.}
+	\xfield{Soit $f,g : [a,b] \to \mathbb{R}$ continûment dérivable sur $[a,b]$ (=dérivable avec une fonction dérivée qui est continue). Alors :\\
+	$\int_a^b f'(x)g(x) dx = \big[f(x)\cdot g(x)\big]_a^b - \int_a^b f(x)g'(x) dx$\\
+	Ou en pratique :\\
+	$\int_a^b f(x)g(x) dx = \big[ F(x) g(x)\big]_a^b - \int_a^b F(x) g'(x) dx$\\
+	avec $f$ continue sur $[a,b]$ et $g$ continûment dérivable sur $[a,b]$. $F$ une primitive de $f$.\\
+	et dans le cas d'une intégrale indéfinie :\\
+	$\int2 f(x)g(x) dx = F(x)g(x) - \int F(x)g'(x) dx$ }
+\end{note}
+
+\begin{note}
+	\xfield{Expliquer ce qu'est la méthode de bissection}
+	\xfield{On considère deux nombres $a$ et $b$ et une fonction $f$ continue sur l'intervalle $[a, b]$ telle que $f$($a$) et $f(b)$ soient de signes opposés.\\
+Supposons que nous voulions résoudre l’équation $f(x) = 0$.\\
+Nous savons d'après le théorème des valeurs intermédiaires que $f$ doit avoir au moins un zéro dans l’intervalle $[a, b]$.\\
+La méthode de bissection consiste à diviser l’intervalle en deux en calculant $c = \frac{(a+b)}{2}$.\\
+Il y a maintenant deux possibilités: ou $f(a)$ et $f(c)$ sont de signes contraires, ou $f(c)$ et $f(b)$ sont de signes contraires.\\
+L’algorithme de dichotomie est alors appliqué au sous-intervalle dans lequel le changement de signe se produit, ce qui signifie que l’algorithme de dichotomie est en soi récursif.\\
+L’erreur absolue de la méthode de dichotomie est au plus de \\
+$\frac{b-a}{2^{n+1}}$}
 \end{note}
 
 
