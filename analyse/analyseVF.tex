@@ -1,0 +1,479 @@
+% -*- coding-system:utf-8 
+% LATEX PREAMBLE --- needs to be imported manually
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+
+%%% commands that do not need to imported into Anki:
+\usepackage{mdframed}
+\newcommand*{\xfield}[1]{\begin{mdframed}\centering #1\end{mdframed}\bigskip}
+\newenvironment{note}{}{}
+\newcommand*{\tags}[1]{\paragraph{tags: }#1} 
+% END OF THE PREAMBLE
+\begin{document}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si sup $A \in A$ et inf $A \in A$, alors $A$ est fermé.}
+	\xfield{FAUX.
+Prendre par exemple $A = [0, 1[ \cup ]1, 2]$. La proposition serait vraie pour un intervalle.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est fermé, alors sup $A \in A$ et inf $A \in A$.}
+	\xfield{FAUX.
+Prendre par exemple $A = [1, \infty[$ .}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est fermé et borné, alors sup $A \in A$ et inf $A \in A$.}
+	\xfield{VRAI.
+Comme $A$ est borné, on a $a := inf A > -\infty$ et $b := sup A < \infty$. Par l’absurde, supposons
+que $a \not\in A$, ainsi $a \in \mathbb{R} \ A$ qui est un ouvert. Par conséquent il existe $r > 0$ tel que $]a - r, a + r[ \subset R \ A$, ou autrement dit $]a - r, a + r[ \cap A = \varnothing$. Ainsi $a + r$ est un minorant de $A$, ce qui contredit le fait que $a$ est le plus grand minorant. Idem pour $b = sup A$.}
+\end{note}
+
+\begin{note}
+	\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est majoré, alors sup $A$ est un point adhérent de $A$.}
+	\xfield{VRAI.
+Par l’absurde, supposons que $b := sup A$ n’est pas adhérent à $A$. Il existe ainsi $r > 0$ tel
+que $]b - r, b + r[ \cap A = \varnothing$ et donc $b - r$ est un majorant de $A$. Cela contredit le fait que $b$ est le plus petit majorant.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est minoré, alors inf $A$ est un point limite de $A$.}
+	\xfield{FAUX.
+Prendre par exemple $A = \{1\}$ qui est minoré mais n’a pas de points limites.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si sup $A \not\in A$ et inf $A \not\in A$, alors A est ouvert.}
+	\xfield{FAUX.
+Prendre par exemple $A = ]0, 1] \cup [2, 3[$ .}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est ouvert, alors inf $A \not\in A$ et sup $A \not\in A$.}
+	\xfield{VRAI.
+Par l’absurde, supposons que $a = inf A \in A$. Comme $A$ est ouvert, il existe $r > 0$ tel que
+$]a - r, a + r[ \subset A$. Donc $a - 2 r \in A$, ce qui contredit le fait que $a$ est un minorant de $A$.
+Idem pour $b = sup A$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou Faux ?\\
+Soit $A \subset \mathbb{R}$ non vide.\\
+Si $A$ est ouvert, alors son bord $\partial A$ est vide.}
+	\xfield{FAUX.
+Prendre par exemple $A = ]0, 1[$. Ainsi $\partial A = \{0, 1\}$.}
+\end{note}
+
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soient $f,\ g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f$ est strictement monotone, alors $f$ est injective.}
+	\xfield{VRAI. Soient $x_1 , x_2 \in \mathbb{R}$ tels que $x_1 < x_2$ . Si f est strictement croissante, on a $f (x_1 ) < f (x_2 )$ et si $f$ est strictement décroissante, on a $f(x_1 ) > f(x_2 )$. Dans les deux cas $f(x_1) \neq = f(x_2)$, c.-à-d. f est injective.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soient $f,\ g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f$ est injective, alors $f$ est monotone.}
+	\xfield{FAUX. Prendre par exemple $f(x) = 2[x] - x + 1$. Soient $x_1 , x_2 \in \mathbb{R}$ tels que $f(x_1 ) = f(x_2 )$.\\
+	Alors $2[x_1] - x_1 + 1 = 2[x_2] - x_2 + 1 \Rightarrow 2([x_1)-[x_2]) = x_1 - x_2$\\
+	$\Rightarrow x_1 - x_2 = 2k$ avec $k \in \mathbb{Z}$.\\
+Ainsi $f(x_1 ) = f(x_2 + 2k) = 2[x_2 + 2k] - (x_2 + 2k) + 1$ \\
+$= 2([x_2 ] + 2k) - (x_2 + 2k) + 1$\\
+$= 2[x_2 ] + 2k - x_2 + 1 = f(x_2 ) + 2k.$\\
+Or, $f(x_1 ) = f(x_2 )$ par hypothèse, si bien que $k = 0$ et donc $x_1 = x_2$ . Ainsi $f$ est bien
+injective. Mais $f$ n’est pas monotone parce qu’on a par exemple $f(0) = 1 > f(\frac{1}{2}) = \frac{1}{2}$, mais $f(0) = 1 < f(1) = 2$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soient $f,\ g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f$ est bijective et croissante, alors son inverse $f^{-1}$ est décroissante.}
+	\xfield{FAUX.
+Prendre par exemple $f(x) = f^{-1} (x) = x$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soient $f,\ g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f\circ g$ est décroissante, alors $f$ et $g$ sont décroissantes.}
+	\xfield{FAUX.
+Prendre par exemple $f(x) = x$ et $g(x) = -x$. Alors $(f\circ g)(x) = -x$ est décroissante
+mais $f$ ne l’est pas.}
+\end{note}
+
+
+
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	$f \circ g = g \circ f \Leftrightarrow f = g$.}
+	\xfield{Faux.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f$ et $g$ sont injectives, alors $f \circ g$ est injective.}
+	\xfield{Vrai.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f \circ f$ est injective, alors $f$ est injective.}
+	\xfield{Vrai}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f \circ g$ est injective, alors $g$ est injective.}
+	\xfield{Vrai}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f \circ g$ est injective, alors $f$ est injective.}
+	\xfield{Faux}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	Si $f \circ g$ est surjective, alors $f$ est surjective.}
+	\xfield{Vrai}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $A \subset \mathbb{R}$ non vide.\\
+	Si sup $A \in A$ et inf $A \in A$, alors $A$ est borné.}
+	\xfield{Vrai. Comme $+\infty$ et $-\infty$ ne sont pas des "éléments" de $\mathbb{R}$, le fait que sup $A$, inf $A \in A \subset \mathbb{R}$ implique que sup $A$ et inf $A$ sont finis et donc $A$ est borné.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $A \subset \mathbb{R}$ non vide.\\
+	Si $A = \{x:0 \le x^2 < 4, x \in \mathbb{Q}\}$, alors $A$ n'admet aucun supremum dans $\mathbb{Q}$}
+	\xfield{Faux. Le supremum de $A$ est $\sqrt{4} = 2$ qui appartient bien à $\mathbb{Q}$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	$4^1000 - 6^500$ est divisible par $10$.}
+	\xfield{Vrai.\\
+	$4^1000 - 6^500 = 16^500 - 6^500 = (16-6) \sum\limits^{499}_{k=0}16^k 6^{500-k-1}$\\
+	La somme étant composée uniquement de nombres entiers, on en déduit que le nombre de départ est divisible par 10.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Pour tout nombre réel $x_1,...,x_n$, $\sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i x_j (x_i-x_j) = 0$}
+	\xfield{Vrai.\\
+	$\sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i x_j (x_i-x_j) = \sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i^2 x_j - \sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i x_j^2 $\\
+	$=\sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i^2 x_j - \sum\limits^{n}_{j=1} \sum\limits^{n}_{i=1} x_j x_i^2 $\\
+	$=\sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i^2 x_j - \sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} x_i^2 x_j $\\
+	$= \sum\limits^{n}_{i=1} \sum\limits^{n}_{j=1} (x_i^2 x_j - x_i^2 x_j) = 0$
+	}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Pour tout nombre réel, $a_1,...a_n$ et $b_1,...b_n$, $\sum\limits^{n}_{i=1}\sum\limits^{i}_{j=1} a_i b_j = \sum\limits^{n}_{j=1}\sum\limits^{j}_{i=1}a_i b_j$.}
+	\xfield{Faux.\\
+	Pour $n=2$ on a par exemple\\
+	$\sum\limits^{2}_{i=1}\sum\limits^{i}_{j=1} a_i b_j = a_1b_1+a_\mathbf{2}b_\mathbf{1}+a_2b_2$\\
+	ce qui en général est différent de \\
+	$\sum\limits^{2}_{j=1}\sum\limits^{j}_{i=1} a_i b_j = a_1b_1+a_\mathbf{1}b_\mathbf{2}+a_2b_2$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Si $n$ est impair, alors $n$ divise $\sum\limits^{n}_{k=1} k$.}
+	\xfield{Vrai. On a $\sum\limits^n_{k=1}k=n\frac{n+1}{2}$. Comme $n$ est impair, $\frac{n+1}{2}$ est entier si bien que $n$ divise la somme.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Pour tout nombre réel $a_1,...,a_n,\ \prod\limits^n_{i=1}\sum\limits^n_{k=1}ka_i = \sum\limits^n_{k=1}\prod\limits^n_{i=1}ka_i$ }
+	\xfield{Faux.\\
+	Comme $\sum\limits^{n}_{k=1}k$ ne dépend pas de $i$, on a \\
+	$\prod\limits^n_{i=1}\sum\limits^n_{k=1}ka_i = \prod\limits^n_{i=1} \left(\sum\limits^n_{k=1}k\right) a_i = (\sum\limits^n_{k=1}k)^n\prod\limits^n_{i=1}a_i = \left(\frac{n(n+1)}{2}\right)^n \prod\limits^n_{i=1}a_i$\\
+	Alors que\\
+	$\sum\limits^n_{k=1}\prod\limits^n_{i=1}ka_i = \sum\limits^n_{k=1}k^n\prod\limits^n_{i=1}a_i = \left(\sum\limits^n_{k=1}k^n\right) \prod\limits^n_{i=1}a_i$\\
+	Pour voir que $\sum\limits^n_{k=1}k^n \neq \left( \frac{n(n+1)}{2}\right)^n$, il suffit de considérer le cas $n=2$ :\\
+	$\sum\limits^2_{k=1}k^2 = 1^2+2^2=5$ mais $\left( \frac{2(2+1)}{2}\right)^2=3^2=9$\\
+	Ainsi les deux quantités de l'énoncé ne sont pas égales.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Le polynôme $z^2 + 1$ divise $z^6 + 3z^4 + z^2 - 1$.}
+	\xfield{Vrai. Noter que $z^2 +1 = (z-i)(z+i)$. Comme$i^6 + 3i^4 + z^2 - 1=-1+3-1-1=0$, $z-i$ divise le polynôme donné. Puisque ce dernier est à coefficients réels, il suit que $\overline{i} = -i$ en est aussi une racine et donc $z+i$ le divise aussi. Ainsi on conclut que $z^2+1 = (z-i)(z+i)$ divise ce polynome donné.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soient $z_1$,...,$z_n$ les racines complexes du polynôme $z^n + a_{n-1}z^{n-1} +$...$+ a_1z + a_0$ .\\
+	Alors on a $\prod\limits^n_{j=1} z_j = (-1)^n a_0$.}
+	\xfield{Vrai. Comme $z_1$,...,$z_n$ sont racines du polynôme, on a\\
+	$z^n + a_{n-1}z^{n-1} +$...$+ a_1z + a_0 = (z-z_1)(z-z_2)...(z-z_n)$.\\
+	En comparant les termes de degré zéro des deux côtés de l'expression, on trouve la formule de l'énoncé.}
+\end{note}
+
+\begin{note}
+	\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Il existe un entier $n \in \mathbb{N}^*$ tel que $(1-i\sqrt{3})^n$ soit réel.}
+	\xfield{Vrai. On calcule la puissance en utilisant la forme polaire\\
+	$(i-i\sqrt{3})^n = 2 \exp{(-i\frac{n\pi}{3})} = 2\left(cos(n\frac{\pi}{3}) - i sin(n\frac{\pi}{3})\right)$.\\
+	Ce nombre est réel si et seulement si $sin(n\frac{\pi}{3}) = 0 \Leftrightarrow n\frac{\pi}{3} = k \pi$ avec $k \in \mathbb{Z} \Leftrightarrow n = 3k$ avec $k \in \mathbb{Z}$. Ainsi on peut par exemple prendre $n=3$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\lim\limits_{n \to \infty} \vert a_{n+1}-a_n \vert = 0$, alors $(a_n)$ est une suite bornée.}
+	\xfield{Faux. Prendre par exemple $a_n = \sqrt{n}$ pour tout $n \in \mathbb{N}^*$. Alors\\
+	$\vert a_{n+1} - a_n \vert = \sqrt{n+1} - \sqrt{n} = \frac{(\sqrt{n+1} - \sqrt{n})(\sqrt{n+1} + \sqrt{n})}{\sqrt{n+1} + \sqrt{n}} = \frac{1}{\sqrt{n+1} + \sqrt{n}}$\\
+	converge vers 0, mais $(a_n)$ n'est évidemment pas bornée.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $(a_n)$ est de Cauchy, il existe $\epsilon > 0$ tel que $\vert a_m - a_n \vert < \epsilon$ pour tout $m,n \in \mathbb{N}^*$.}
+	\xfield{Vrai. Comme la suite est de Cauchy, elle converge vers $a \in \mathbb{R}$. Il existe $C>0$ tel que $\vert a_n - a \vert < C$ pour tout $n \in \mathbb{N}^*$. Ainsi $\vert a_m - a_n \vert \le \vert a_m - a \vert + \vert a - a_n \vert < 2C$ pour tout $m,n \in \mathbb{N}^*$. On peut donc prendre $\epsilon = 2C$ dans la proposition.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $(a_n)$ est de Cauchy, alors $(\vert a_n \vert)$ est de Cauchy. }
+	\xfield{Vrai. Découle de la deuxième inégalité triangulaire de la valeur absolue : $\big|\vert a_n \vert - \vert a_m\vert\big| \le \vert a_n - a_m \vert$ pour tout $m,n \in \mathbb{N}^*$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\lim\limits_{n \to \infty} \vert a_n \vert = a$, alors $\limsup\limits_{n \to \infty}a_n = a$ et $\liminf\limits_{n \to \infty}a_n = -a$}
+	\xfield{Faux. Prendre par exemple la suite constante $a_n = 1$ pour tout $n \in \mathbb{N}^*$. Alors $1= \lim\limits_{n \to \infty} \vert a_n \vert = \limsup\limits_{n \to \infty} a_n = \liminf\limits_{n \to \infty} a_n$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\lim\limits_{n \to \infty} \vert a_n \vert = 0$, alors $(a_n)$ converge vers zéro.}
+	\xfield{Vrai. On a $0 \le \liminf\limits_{n \to \infty} \vert a_n \vert \le \limsup\limits_{n \to \infty} \vert a_n \vert$. Donc $\liminf\limits_{n \to \infty} \vert a_n \vert = \limsup\limits_{n \to \infty} \vert a_n \vert = 0$. Ainsi $\lim\limits_{n \to \infty} \vert a_n \vert =0$ et donc $(a_n)$ converge vers zéro aussi.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\limsup\limits_{n \to \infty}a_n = 0$, alors $a_n \le 0$ pour tout $n \in \mathbb{N}^*$.}
+	\xfield{Faux. Prendre par exemple $a_n = \frac{1}{n} \ge 0$ pour tout $n \in \mathbb{N}^*$. Alors sup($E_n$) = sup $\{\frac{1}{n}$,$\frac{1}{n+1}$,...$\} = \frac{1}{n}$, d'où $\limsup\limits_{n \to \infty} a_n = 0$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\limsup\limits_{n \to \infty}a_n = \limsup\limits_{n \to \infty}b_n =0$, alors $\limsup\limits_{n \to \infty}(a_n-b_n) = 0$}
+	\xfield{Faux. Prendre par exemple $a_n = (-1)^n -1$ et $b_n = (-1)^n + 1$ si bien que $a_n - b_n = -2$ pour tout $n \in \mathbb{N}^*$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soit $(a_n)_{n\ge 1}$ une suite numérique telle que $\vert a_{n+1} \vert < \vert a_n \vert$ pour tout $n \in \mathbb{N}^*$.\\
+	\begin{enumerate}
+		\item Alors $(\vert a_{n+1} \vert )$ converge.
+		\item Alors $(a_{n+1})$ converge.
+		\item Alors $(a_{n+1})$ a une sous-suite convergente.
+		\item Alors $\liminf\limits_{n \to \infty}a_n^2 = \limsup\limits_{n \to \infty}a_n^2 $
+		\item Alors $(a_{n+1})$ a au plus deux points d'accumulation.
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item Vrai. $(\vert a_n \vert)$ est décroissante et minorée par 0.
+		\item Faux. Prendre par exemple $a_n = (-1)^n \frac{n+1}{n}$ pour tout $n \in \mathbb{N}^*$. Comme cette suite alterne $(a_na_{n+1} < 0)$ et que $\lim\limits_{n \to \infty} \vert a_n \vert =1$, elle ne converge pas.
+		\item Vrai. $(\vert a_n \vert)$ est bornée puisque $\vert a_n \vert < \vert a_1 \vert$ pour tout $n \in \mathbb{N}^*$. Ainsi $(a_n) \subset [-\vert a_1\vert,\vert a_1 \vert]$ est aussi bornée. Par le théorème de Bolzano-Weierstrass, tout suite bornée admet une sous-suite convergente.
+		\item Vrai. Comme $(\vert a_n \vert)$ (cf. question 1), la suite des carrés $(a_n^2)$ converge aussi : $\lim\limits_{n \to \infty}a_n^2 = \lim\limits_{n \to \infty}\vert a_n^2\vert = \left(\lim\limits_{n \to \infty}\vert a_n\vert\right)^2$. Ainsi $\lim\limits_{n \to \infty}a_n^2 = \liminf\limits_{n \to \infty}a_n^2 = \limsup\limits_{n \to \infty}a_n^2$.
+		\item Vrai. Si $a$ est un point d'accumulation, il existe une sous-suite $(a_{n_{k}}k\in \mathbb{N}^*$ de $(a_n)$ telle que $\lim\limits_{n \to \infty} a_{n_{k}} =a$. Comme $\big| \vert a_{n_{k}}\vert - \vert a\vert\big| \le \vert a_{n_{k}} -a\vert$, il suit que $\lim\limits_{n \to \infty} \vert a_{n_{k}} \vert =\vert a\vert$.\\
+		Or, $(\vert a_{n_{k}}\vert)_{k \ge 1}$ est une sous-suite de $(\vert a_n\vert)_{n\ge 1}$ et on sait par la question 1 que cette dernière converge. Soit donc $l = \lim\limits_{n \to \infty} \vert a_n \vert$. Ainsi pour tout $\epsilon > 0$, il existe $n_0 \in \mathbb{N}^*$ tel que $\big| \vert a_n\vert - l \big| < \epsilon$ pour $n \ge n_0$. Comme $k \ge n_0$ implique $n_k \ge n_0$, on a $\big| \vert a_{n_{k}}\vert - l \big| < \epsilon$ pour $k \ge n_0$, d'où $l = \vert a\vert$ par unicité de la limite. Finalement $a = \pm l$, c.-à-d. $a$ peut prendre au plus deux valeurs distinctes. 
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\sum\limits^{\infty}_{n=1} (-1)^n a_n$ converge, alors $\lim\limits_{n \to \infty} a_n = 0$.}
+	\xfield{Vrai. Comme la série converge, on a $\lim\limits_{n \to \infty} (-1)^n a_n = 0$ par le critère nécessaire. Ainsi, $0=\lim\limits_{n \to \infty} \vert (-1)^n a_n\vert = \lim\limits_{n \to \infty} \vert a_n \vert$. La propostion découle par le théorème des deux gendarmes.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\lim\limits_{n \to \infty} a_n = 0$, alors  $\sum\limits^{\infty}_{n=1} a_n$ converge.}
+	\xfield{Faux. Prendre par exemple la suite $a_n = \frac{1}{n}$. Elle converge vers $0$, mais on a vu en cours que la série harmonique diverge.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\sum\limits^{\infty}_{n=1} a_n$ converge absolument, alors $\sum\limits^{\infty}_{n=1} (-1)^n a_n$ converge.}
+	\xfield{Vrai. Comme $\vert (-1)^n a_n\vert = \vert a_n \vert$ et que $\sum\limits^{\infty}_{n=1} \vert a_n \vert$ converge, la série $\sum\limits^{\infty}_{n=1} (-1)^n a_n$ converge par le critère de comparaison.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $(a_n)$ est strictement décroissante, alors $\sum\limits^{\infty}_{n=1} (-1)^n a_n$ converge.}
+	\xfield{Faux. Prendre par exemple la suite $a_n = -n$ qui est strictement décroissante. Comme $(-1)^n a_n = (-1)^{n+1}n$ ne converge pas vers zéro, la série diverge.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\sum\limits^{\infty}_{n=1} a_n$ converge, alors $\sum\limits^{\infty}_{n=1} a^2_n$ converge.}
+	\xfield{Faux. Prendre par exemple la suite $a_n = \frac{(-1)^n}{\sqrt{n}}$. Par le critère de Leibniz, la série  $\sum\limits^{\infty}_{n=1}\frac{(-1)^n}{\sqrt{n}}$ converge. Par contre, $a_n^2 = \frac{1}{n}$ et on obtient la série harmonique qui diverge. }
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	Si $\sum\limits^{\infty}_{n=1} a_n$ converge absolument, alors $\sum\limits^{\infty}_{n=1} a^2_n$ converge.}
+	\xfield{Vrai. Comme $\sum\limits^{\infty}_{n=1} \vert a_n \vert = 0$, il existe $n_0 \in \mathbb{N}^*$ tel que $\vert a_n\vert < 1$ pour tout $n \ge n_0$ (définition de la convergence avec $\epsilon = 1$). Donc $\vert a_n^2\vert < \vert a_n \vert$ pour tout $n\ge n_0$ et ainsi la série $\sum\limits^{\infty}_{n=1} \vert a^2\vert = \sum\limits^{\infty}_{n=1} a^2_n$ converge par le critère de comparaison.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $(a_n)_{n\ge 1}$ une suite numérique.\\
+	La Série $\sum\limits^{\infty}_{n=1} \frac{1}{\sqrt{n}}$ converge.}
+	\xfield{Faux. On a pour tout $n \ge 2$ que $\sqrt{n} \le n$ et donc $\frac{1}{n} \le \frac{1}{\sqrt{n}}$. Comme la série diverge, on conclut par le critère de comparaison que la série en question diverge aussi.}
+\end{note}
+
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable à gauche et à droit en $a \in \mathbb{R}$, alors $f$ est dérivable en $a$.}
+	\xfield{Faux. Prendre par exemple $f(x) = \vert x \vert$ qui n'est pas dérivable en 0. Les dérivées unilatérales en 0 existent mais elles ne sont pas égales.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable sur $I \subset\mathbb{R}$, alors $f'$ est continue $I$.}
+	\xfield{Faux. Prendre par exemple la fonction $f(x) = \left\{
+	 \begin{array}{ll}
+		x\sin(x)\sin(\frac{1}{x}  & \mbox{if } x \neq 0 \\
+		0 & \mbox{if } x = 0
+	\end{array}
+\right.$Alors $f$ est dérivable sur $]-1,1[$ (en fait, sur $\mathbb{R}$) mais sa dérivée n'est pas continue en 0.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f$ est dérivable sur $\mathbb{R}$, alors $g(x) = \sqrt{f^2(x)}$ est dérivable sur $\mathbb{R}$.}
+	\xfield{Faux. En prenant $f(x) = x$, on a $g(x) = \sqrt{x^2} = \vert x \vert$ qui n'est pas dérivable en 0.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f(x) = x + e^x$, alors $(f^{-1})(1) = 1 + \frac{1}{e}$.}
+	\xfield{Faux. La formule pour la dérivée de la fonction réciproque est $(f^{-1})'(x) = \frac{1}{f'(f^{-1}(x))}$.\\
+	Ici on a $f'(x) = 1 + e^x$ et $f^{-1}(1) = 0$, puisque $f(0) = 1$. Ainsi \\
+	$(f^{-1})'(1) = \frac{1}{f'(0)} = \frac{1}{1 + e^0} = \frac{1}{2}$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions.\\
+	Si $f(x) = x^2 - 2x$, alors $(f\circ f)'(1) = 0$.}
+	\xfield{Vrai. On a $f'(1) = 2 -2 = 0$ et donc $(f\circ f)'(1) = f'(f(1))$. $f'(1)=0$.}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Vrai ou faux ?\\
+	Soit $f: \mathbb{R} \to \mathbb{R}$ une fonction continue sur $[a,b] \subset D(f), a<b$ et dérivable sur $]a,b[.$\\
+	Si $\lim_{\substack{x\to a\\ x>a}} f'(x)$ existe, alors $f$ est dérivable à droite $a$ et $\lim_{\substack{x\to a\\ x>a}} f'(x) = f'_+(a)$}
+	\xfield{Vrai. Soit par $x\in ]a,b[$. Par le théorème des accroissements finis, il existe $c_x \in ]a,x[$ tel que $\frac{f(x)-f(a)}{x-a} = f'(c_x)$. Comme $\lim_{\substack{x\to a\\ x>a}} f'(x)$ existe par hypothèse et que $\lim_{\substack{x\to a\\ x>a}} c_x = a$, on a\\
+	$\lim_{\substack{x\to a\\ x>a}} f'(x) = \lim_{\substack{x\to a\\ x>a}} f'(c_x) = \lim_{\substack{x\to a\\ x>a}} \frac{f(x)-f(a)}{x-a} = f'_+(a)$}
+\end{note}
+
+\begin{note}
+\tags{V/F}
+	\xfield{Soient $f,g: \mathbb{R} \to \mathbb{R}$ des fonctions dérivables sur $\mathbb{R}$ avec $g'(x) \neq 0$ pour tout $x \in \mathbb{R}$.
+	\begin{enumerate}
+		\item Si $\lim\limits_{x\to \infty} f(x) =\lim\limits_{x\to \infty} g(x) = \infty$, alors $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)} = \lim\limits_{x\to \infty} \frac{f'(x)}{g'(x)}$.
+		\item Si $\lim\limits_{x\to \infty} \frac{f'(x)}{g'(x)}$ n'existe pas, alors $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)}$ n'existe pas.
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+		\item Faux. Prendre par exemple $f(x) = x + \sin(x)$ et $g(x) = x$. Dans ce cas on a $\lim\limits_{x\to \infty} \frac{f(x)}{g(x)}=\lim\limits_{x\to \infty}\big(1+\frac{sin(x)}{x}\big) = 1$ mais $\frac{f'(x)}{g'(x)} = 1+ \cos(x)$ n'admet pas de limite à l'infini (et donc la dernière hyphotèse de Bernoulli-l'Hospital n'est pas satifsaite).
+		\item Faux. Prendre les fonctions de la question précédente.\\
+		\emph{Remarque}: Dans ce cas particulier (puisque $\lim\limits_{x\to \infty} f(x) = \lim\limits_{x\to \infty} g(x) = \infty$), l'affirmation est en quelque sorte une réciprogue de Bernoulli-l'Hospital qui est, comme vu à plusieurs reprises, en général fausse.
+	\end{enumerate} }
+\end{note}
+
+\end{document}
