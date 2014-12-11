@@ -432,7 +432,9 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
         $\lim\limits_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right| = r$ existe (d'Alembert)\\
         Ou si\\
         $\lim\limits_{n \to \infty} \left|a_n\right|^{\frac{1}{n}} = r$ existe (Cauchy)\\
-        Si $r  1$, alors la serie diverge. So $r = 1$, il n'y a pas de conclusion possible en utilisant cette méthode.
+        Si $r < 1$ alors la série converge.\\
+	Si $r > 1$, alors la serie diverge.\\
+	Si $r = 1$, il n'y a pas de conclusion possible en utilisant cette méthode.
     }
 \end{note}
 
@@ -578,7 +580,7 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 	\xfield{Comment trouver le rayon de convergence d'une série entière ?}
 	\xfield{On peut le trouver en utilisant les critères de Cauchy et d'Alembert :\begin{itemize}
 	\item $r = \left[ \lim\limits_{k \to \infty} (\vert a_k \vert^{\frac{1}{k}})\right]^{-1}$ (Cauchy
-	\item $r=  \lim\limits_{k \to \infty} \big| \frac{a_k}{a_{k+1}}\big|$ (D'alembert)
+	\item $r=  \lim\limits_{k \to \infty} \big| \frac{a_k}{a_{k+1}}\big|$ (D'Alembert)
 	\end{itemize}
 	 Si ces limites existent.}
 \end{note}

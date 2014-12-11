@@ -439,13 +439,27 @@ $\frac{1}{\text{det}(\mathbf{A})}\operatorname{adj}(\mathbf{A})= A^{-1}$
 	\end{enumerate} }
 \end{note}
 
-%\begin{note}
-%	\xfield{\begin{enumerate}
-%	\item Define what an orthogonal set is.
-%	\item Define what an orthonormal set is.
-%	\end{enumerate} }
-%	\xfield{\begin{enumerate}
-%	
-%	\end{enumerate} }
-%\end{note}
+\begin{note}
+	\xfield{\begin{enumerate}
+	\item Define what an orthogonal set is.
+	\item Define what an orthonormal set is.
+	\end{enumerate} }
+	\xfield{\begin{enumerate}
+	\item  An orthogonal set of vectors is a linear independent set $v_1,v_2,...,v_n$ which are all perpendicular to each other, meaning that $v_i \bullet v_j = 0$ (with $i\neq j$. It also is a basis in $\mathbb{R}^n$.
+	\item An orthonormal set is an orthogonal set s.t $\vert\vert u_i \vert\vert = 1$. For example, let $U$ be a $m\times n$ matrix with orthonormal vectors, then $U^TU = I_n = \begin{vmatrix}
+	1 & 0 & \cdots & 0\\
+	0 & 1 & \cdots & 0\\
+	\vdots & \vdots &\ddots & \vdots\\
+	0 & 0 & \cdots & 1
+	\end{vmatrix}$ (warning $m \ge n$)
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\xfield{Define what an orthogonal projection is.\\
+	What does it change if we use an orthonormal basis ?}
+	\xfield{Let $W \subseteq \mathbb{R}^n$ with an orthogonal basis $\{v_1,v_2,...,v_n\}$ and $b \in \mathbb{R}^n$ then the orthogonal projection proj$_W(b) = \hat{b} =$\\
+	$\frac{b\bullet v_1}{v_1 \bullet v_1} v_1 + \frac{b\bullet v_2}{v_2 \bullet v_2} v_2 + ... + \frac{b\bullet v_n}{v_n \bullet v_n} v_n $\\
+	If we take the orthormal basis of $W$, $\{u_1,u_2,...,u_n\}$, then proj$_W(b) = \hat{b} = UU^Tb$}
+\end{note}
 \end{document}
