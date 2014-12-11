@@ -462,4 +462,35 @@ $\frac{1}{\text{det}(\mathbf{A})}\operatorname{adj}(\mathbf{A})= A^{-1}$
 	$\frac{b\bullet v_1}{v_1 \bullet v_1} v_1 + \frac{b\bullet v_2}{v_2 \bullet v_2} v_2 + ... + \frac{b\bullet v_n}{v_n \bullet v_n} v_n $\\
 	If we take the orthormal basis of $W$, $\{u_1,u_2,...,u_n\}$, then proj$_W(b) = \hat{b} = UU^Tb$}
 \end{note}
+
+\begin{note}
+	\xfield{How to you find an orthogonal/orthonormal basis in a subspace $W \subseteq \mathbb{R}^n$ ?}
+	\xfield{Use the Gram-Schmidt thm. :\\
+	Given a basis $\{x_1,x_2,...,x_p\}$ of a subspace $W \subseteq \mathbb{R}^n$\\
+	Let $v_1 = x_1$\\
+	$v_2 = x_2 - \frac{x_2 \bullet v_1}{v_1\bullet v_1}v_1$\\
+	$v_3 = x_3 - \frac{x_3 \bullet v_1}{v_1\bullet v_1}v_1- \frac{x_3 \bullet v_2}{v_2\bullet v_2}v_2$\\
+	$\vdots$\\
+	$v_p = x_p -\frac{x_p \bullet v_1}{v_1\bullet v_1}v_1 - \frac{x_p \bullet v_2}{v_2\bullet v_2}v_2- \cdots -\frac{x_p \bullet v_{p-1}}{v_{p-1}\bullet v_{p-1}}v_{p-1}$\\
+	Which forms an orthogonal basis (i.e. Span$\{v_1,v_2,...,v_p\} =$ Span$\{x_1,x_2,...,x_p\}$)\\
+	To transform it to an orthonormal basis : $u_i = \frac{v_i}{\vert \vert v_1 \vert \vert}$}
+\end{note}
+
+\begin{note}
+	\xfield{How to make a QR decomposition of $A^{n\times p}$ matrix with linearly independent columns ?\\
+	What kind of use it has ?}
+	\xfield{We will transform $A^{n\times p} = Q^{n\times p} R^{p\times p}$\\
+	We find an orthonormal basis throught gram-schmidt, we normalize it (to have an orthonormal basis), this is $Q$.\\
+	Then $R=Q^TA$ which is a upper diagonal matrix with all elements of diagonal $>0$.\\
+	It can be used to find the least square solution of $Ax=b$, if $A$ has a $QR$ decomposition, then $\hat{x} = R^{-1}Q^Tb$}
+\end{note}
+
+\begin{note}
+	\xfield{What is a "least square solution" ? How to find it ?}
+	\xfield{We are given $A^{m \times n}$ matrix, we want to solve $Ax=b$, $b\in \mathbb{R}^m,\ x\in \mathbb{R}^n$. However $b \not\in Span \{a_1,a_2,...,a_n\}$, then the least square solution $\hat{x} \in \mathbb{R}^n$ for which $A\hat{x}$ is as close to $b$ as possible.\\
+	Then the set of least square solutions of $Ax=b$ = the set of solutions of $A^TA\hat{x}=A^Tb$\\
+	And in the special case where the columns of $A$ are linearly independent, then $Ax=b$ has a \emph{unique} least-square solution :\\
+	$\hat{x} = (A^TA)^{-1}A^Tb$}
+\end{note}
+
 \end{document}
