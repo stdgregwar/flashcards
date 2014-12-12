@@ -26,19 +26,22 @@ $x(t)$ & Position en fonction du temps & $[m]$ \\
 \hline
 $v(t) = \dot{x}(t)$ & Vitesse & $[\frac{m}{s}]$ \\
 \hline
+
 $a(t) = \ddot{x}(t)$ & Acceleration & $[\frac{m}{s^2}]$ \\
+
 \hline
 $F_{cause}$ & Force associée à une cause & $[N] = [\frac{kg*m}{s^2}]$ \\
 \hline
 $p(t) = mv(t)$ & Quantité de mouvement & $[\frac{kg*m}{s}]$ \\
 \hline
-$E_{cin}$ & Energie cinétique du point & $[J] = [\frac{kg*m^2}{s^2}]$ \\
-\hline
 $k$ & Constante d'élasticité du ressort & $[\frac{kg}{s^2}]$\\
+\hline
+$E_{cin}$ & Energie cinétique du point & $[J] = [\frac{kg*m^2}{s^2}$ \\
 \hline
 \end{tabular}
 
 \subsection{Formules}
+
 
 $\sum F_{ext} = ma$, $W_F = \int\limits_a^b F dx$
 
@@ -53,8 +56,7 @@ Force normale & $N$ & déterminer par Newton \\
 Force de Tension & $T$ & déterminer par Newton \\
 Force centrifuge (fictive) & $-$ & $-m\vec\omega \times (\vec\omega \times \vec v)$ \\
 Force de coriolis (fictive) & $-$ & $-2m\omega \times \vec{v'}$ \\
-Force de gravitation & $F_{12}$ & $-G\frac{m_1 \cdot m_2}{d^2}\vec{u_{12}}$
-
+Force de gravitation & $F_{12}$ & $-G\frac{m_1 \cdot m_2}{d^2}\vec{u_{12}}$ \\
 \end{tabular}
 
 \subsubsection{Expression d'Énergies}
@@ -83,6 +85,11 @@ $\dot{\hat{\mathbf{e}}}_i = \omega \times \hat{\mathbf{e}}_i$ , ou $\omega$ est 
 
 $$\omega = \dot\theta \hat e_z + \dot\phi \hat e_\theta$$
 
+$$\sum F_{ext} = ma$$
+
+\subsection{Systemes de coordonnées}
+\subsubsection{Coordonnées Sphériques}
+
 \begin{multicols}{3}
 
 \begin{align*}
@@ -108,6 +115,7 @@ z & = \rho \cos \phi
 \end{multicols}
 
 Vecteur rayon et dérivées:
+
 \begin{align*}
 \vec{r} &= \rho \hat{e}_{\rho} \\
 \dot{\vec{r}} &= \dot{\rho}\hat{e}_{\theta} + \rho\dot{\phi}\sin\theta\hat{e}_{\phi} = \vec{v} \\
@@ -120,9 +128,12 @@ Vecteur rayon et dérivées:
 
 \subsubsection{Coordonnées Cylindriques}
 
+
 $$\omega = \dot\theta \hat e_z$$
 
 \begin{multicols}{3}
+
+
 \begin{align*}
 x &= r  \cos\theta \\
 y &= r  \sin\theta \\
@@ -151,6 +162,7 @@ Vecteur rayon et dérivées:
 + \left( r\ddot\theta + 2\dot r \dot \theta \right) \hat e_\theta + \ddot z \hat e_z 
 \end{align*}
 
+
 \section{Physique du corps Solide}
 
 \subsection{Noms de variables}
@@ -177,5 +189,6 @@ $\vec{v} = \vec{\omega} \times \vec{r}$,
 $\vec{a_t} = \vec{\alpha} \times \vec{r}$,
 $I = \sum \limits_M d^2 dm$,
 $E_{cin} = \frac{1}{2}I\omega^2$
+
 
 \end{document}

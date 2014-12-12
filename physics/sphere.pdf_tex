@@ -54,7 +54,7 @@
     \put(0.92880061,0.38206482){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{y}}}%
     \put(0.46000796,0.94081323){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{z}}}%
     \put(0.37256355,0.18093382){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\theta$}}}%
-    \put(0.5321256,0.76734205){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\phi$}}}%
+    \put(0.5321256,0.76734205){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\varphi$}}}%
     \put(0.45833333,0.58333335){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\rho$}}}%
     \put(0.56944433,0.65277777){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{P}}}%
   \end{picture}%
