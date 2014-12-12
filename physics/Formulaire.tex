@@ -26,22 +26,62 @@ $x(t)$ & Position en fonction du temps & $[m]$ \\
 \hline
 $v(t) = \dot{x}(t)$ & Vitesse & $[\frac{m}{s}]$ \\
 \hline
-$a(t) = \ddot{x}(t)$ & Acceleration Angulaire & $[\frac{rad}{s^2}]$ \\
+$a(t) = \ddot{x}(t)$ & Acceleration & $[\frac{m}{s^2}]$ \\
 \hline
 $F_{cause}$ & Force associée à une cause & $[N] = [\frac{kg*m}{s^2}]$ \\
 \hline
 $p(t) = mv(t)$ & Quantité de mouvement & $[\frac{kg*m}{s}]$ \\
 \hline
-$E_{cin}$ & Energie cinétique du point & $[J] = [\frac{kg*m^2}{s^2}$ \\
+$E_{cin}$ & Energie cinétique du point & $[J] = [\frac{kg*m^2}{s^2}]$ \\
+\hline
+$k$ & Constante d'élasticité du ressort & $[\frac{kg}{s^2}]$\\
 \hline
 \end{tabular}
 
 \subsection{Formules}
 
-$$\sum F_{ext} = ma$$
+$\sum F_{ext} = ma$, $W_F = \int\limits_a^b F dx$
+
+\subsubsection{Expression de forces}
+
+\begin{tabular}{c|c|c}
+Nom & Raccourci usuel & Expression \\
+\hline
+Force pesante & $F_p$ & $mg$, $g$ accélération terrestre \\
+Force de rappel du ressort & $F_k$ & $-k\Delta x$, k elasticité du ressort\\
+Force normale & $N$ & déterminer par Newton \\
+Force de Tension & $T$ & déterminer par Newton \\
+Force centrifuge (fictive) & $-$ & $-m\vec\omega \times (\vec\omega \times \vec v)$ \\
+Force de coriolis (fictive) & $-$ & $-2m\omega \times \vec{v'}$ \\
+Force de gravitation & $F_{12}$ & $-G\frac{m_1 \cdot m_2}{d^2}\vec{u_{12}}$
+
+\end{tabular}
+
+\subsubsection{Expression d'Énergies}
+
+\begin{tabular}{c|c|c}
+Nom & Raccourci usuel & Expression \\
+\hline
+Énergie potentielle de gravité & $E_{g}$ & $mgh$ \\
+Énergie potentielle du ressort & $E_k$ & $\frac{1}{2}kx^2$ \\
+Énergie cinétique & $E_{cin}$ & $\frac{1}{2}mv^2$ \\
+\end{tabular}
+
+\pagebreak
 
 \subsection{Systemes de coordonnées}
+
+Loi de poisson :
+
+\begin{center}
+$\dot{\hat{\mathbf{e}}}_i = \omega \times \hat{\mathbf{e}}_i$ , ou $\omega$ est la vitesse angulaire du référentiel.
+\end{center}
+
+
+
 \subsubsection{Coordonnées Sphériques}
+
+$$\omega = \dot\theta \hat e_z + \dot\phi \hat e_\theta$$
 
 \begin{multicols}{3}
 
@@ -53,7 +93,7 @@ z & = \rho \cos \phi
 
 \columnbreak
 
-\includesvg[width = 0.3\textwidth]{sphere}
+\includesvg[width = 0.25\textwidth]{sphere}
 
 \columnbreak
 
@@ -68,21 +108,21 @@ z & = \rho \cos \phi
 \end{multicols}
 
 Vecteur rayon et dérivées:
-
 \begin{align*}
 \vec{r} &= \rho \hat{e}_{\rho} \\
 \dot{\vec{r}} &= \dot{\rho}\hat{e}_{\theta} + \rho\dot{\phi}\sin\theta\hat{e}_{\phi} = \vec{v} \\
 \begin{split}
 \ddot{\vec{r}} &= \left( \ddot{\rho} - \rho\dot\theta^2 - \rho\dot\phi^2\sin^2\theta \right)\mathbf{\hat{e}_\rho} \\
 &+ \left( \rho\ddot\theta + 2\dot{\rho}\,\dot\theta - \rho\dot\phi^2\sin\theta\cos\theta \right) \mathbf{\hat{e}_\theta}\\
-&+ \left( \rho\ddot\phi\,\sin\theta + 2\dot{\rho}\,\dot\phi\,\sin\theta + 2 \rho\dot\theta\,\dot\phi\,\cos\theta \right) \mathbf{\hat{e}_\phi} 
+&+ \left( \rho\ddot\phi\,\sin\theta + 2\dot{\rho}\,\dot\phi\,\sin\theta + 2 \rho\dot\theta\,\dot\phi\,\cos\theta \right) \mathbf{\hat{e}_\phi} = \vec{a}
 \end{split}
 \end{align*}
 
 \subsubsection{Coordonnées Cylindriques}
 
-\begin{multicols}{3}
+$$\omega = \dot\theta \hat e_z$$
 
+\begin{multicols}{3}
 \begin{align*}
 x &= r  \cos\theta \\
 y &= r  \sin\theta \\
@@ -103,6 +143,14 @@ z & = z
 
 \end{multicols}
 
+Vecteur rayon et dérivées:
+\begin{align*}
+\vec{r} &= r \hat e_r + z\hat e_z \\
+\dot{\vec{r}} &= \dot r \hat e_r + r \dot\theta\hat e_\theta + \dot z \hat e_z = \vec{v} \\
+\ddot{\vec{r}} &= \left(\ddot r - r\dot\theta^2 \right)\hat e_r 
++ \left( r\ddot\theta + 2\dot r \dot \theta \right) \hat e_\theta + \ddot z \hat e_z 
+\end{align*}
+
 \section{Physique du corps Solide}
 
 \subsection{Noms de variables}
@@ -122,12 +170,12 @@ $\alpha$ & Acceleration Angulaire & $[\frac{rad}{s^2}]$ \\
 \end{tabular}
 
 \subsection{Formules}
+$M_F = \vec F \times \vec R$,
 $\sum \vec{M_{ext}} = I\vec{\alpha}$ ,
 $\frac{d\vec{L}}{dt} = \sum \vec{M_{ext}}$,
 $\vec{v} = \vec{\omega} \times \vec{r}$,
 $\vec{a_t} = \vec{\alpha} \times \vec{r}$,
 $I = \sum \limits_M d^2 dm$,
-
-
+$E_{cin} = \frac{1}{2}I\omega^2$
 
 \end{document}
