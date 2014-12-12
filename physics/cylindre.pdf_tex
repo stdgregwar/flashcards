@@ -56,6 +56,6 @@
     \put(0.46531496,0.58522091){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{P}}}%
     \put(0.47203229,0.32596992){\color[rgb]{0,0.50196078,0}\makebox(0,0)[lb]{\smash{z}}}%
     \put(0.257272,0.32787624){\color[rgb]{0.50196078,0,0}\makebox(0,0)[lb]{\smash{r}}}%
-    \put(0.38525222,0.16382193){\color[rgb]{0,0,0.50196078}\makebox(0,0)[lb]{\smash{$\theta$}}}%
+    \put(0.38525222,0.20382193){\color[rgb]{0,0,0.50196078}\makebox(0,0)[lb]{\smash{$\theta$}}}%
   \end{picture}%
 \endgroup%
