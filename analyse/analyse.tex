@@ -18,7 +18,7 @@
 \begin{note}
 	\tags{trigo}
 	\xfield{Calculer $sin(\frac{\pi}{4})$ et $cos(\frac{\pi}{4})$}
-	\xfield{On peut calculer facilement ces valeurs en prenant un triangle isocèle de côtés isocèles 1, il aura deux angles de $\frac{\pi}{4}$, un angle droit et une hypothénuse de $\sqrt{2}$ alors : \\
+	\xfield{On peut calculer fac/ilement ces valeurs en prenant un triangle isocèle de côtés isocèles 1, il aura deux angles de $\frac{\pi}{4}$, un angle droit et une hypothénuse de $\sqrt{2}$ alors : \\
 	$\sin(\frac{\pi}{4}) = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}$\\
 	$\cos(\frac{\pi}{4}) = \frac{\sqrt{2}}{2}$}
 \end{note}
@@ -158,7 +158,7 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
 	\\exprimer $1-\sqrt{3}i$ en forme polaire}
 	\xfield{La forme polaire de $z$ s'écrit comme $z= \vert z \vert e^{i \varphi}$ \\
 	où $\vert z \vert = \sqrt{a^2+b^2}$\\
-	et $\varphi = 2 \cdot \arctan(\frac{b}{a+\vert z \vert})$ si $y \neq 0$ ou si $x > 0 et y = 0$, sinon $\varphi = \pi$\\
+	et $\varphi = 2 \cdot \arctan(\frac{b}{a+\vert z \vert})$ si $y \neq 0$ ou si $x > 0$ et $y = 0$, sinon $\varphi = \pi$\\
 	Pour $z = 1-\sqrt{3}i$\\
 	$\vert z \vert = \sqrt{1^2+\sqrt{3}^2} = 2$\\
 	et $\varphi =  2 \cdot \arctan(\frac{\sqrt{3}}{1+2}) = 2 \cdot = \arctan(\frac{1}{\sqrt{3}})=2 \cdot \frac{\pi}{6} = \frac{\pi}{3}$\\
@@ -636,10 +636,10 @@ $sin(\frac{\pi}{6})$,  $cos(\frac{\pi}{6})$ , $sin(\frac{\pi}{3})$ et $cos(\frac
 	\end{enumerate} }
 	\xfield{\begin{enumerate}
 		\item La fonction $f$ est dérivable en $x_0$ si la limite :\\
-			$\lim\limits_{\substack{x\to x_0\\x > x_0}} \frac{f(x)-f(x_0)}{x-x_0} \equiv d(x_0) \in \mathbb{R}$ existe
+			$\lim\limits_{\substack{x\to x_0\\x \neq x_0}} \frac{f(x)-f(x_0)}{x-x_0} \equiv d(x_0) \in \mathbb{R}$ existe
 		\item La fonction $f$ est différentiable en $x_0$ s'il existe un nombre $a \in \mathbb{R}$ et une fonction $r:\ ]a,b[ \to \mathbb{R}$ tels que :\\
 		$f(x_0 + h) = f(x_0) + a \cdot h + r(x_0 + h) \cdot h$\\
-		avec $\lim\limits_{\substack{x\to x_0\\x > x_0}} r(x_0+h) = 0$
+		avec $\lim\limits_{\substack{x\to x_0\\x \neq x_0}} r(x_0+h) = 0$
 		\item Soit la fonction $f$ dérivable sur $]a,b[$, alors on peut définir $f'$, appelée la dérivée de $f$, par \\
 		$f'(x) = d(x) \equiv \lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h}$
 		\item La n-ième dérivée de $f$ : $f^{(n)} = (f^{(n-1)})'(x)$
@@ -669,7 +669,7 @@ $f'(u)=\frac{f(b)-f(a)}{b-a}$}
 
 \begin{note}
 	\tags{fonctions derivees}
-	\xfield{Théorème des acrroissements finis généralisé}
+	\xfield{Théorème des accroissements finis généralisé}
 	\xfield{Soit $f,g : \mathbb{R} \rightarrow \mathbb{R}$, $[a,b] \subset D(f) \cap D(g),\ b>a$, $f,g$ continues sur $[a,b]$, dérivables sur $]a,b[$, $g'(x) \neq 0$. Alors il existe $u\in ]a,b[$ tel que\\
 $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 \end{note}
@@ -743,7 +743,7 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 	\tags{series fonctions derivees taylor}
 	\xfield{Donner le théorème de Taylor (développement limité d'ordre $n$)}
 	\xfield{Soit la fonction de classe $C^{n+1}(I)$ pour un $n \in \mathbb{N}$ et soit $a,x \in I$ Alors\\
-	$f(x) = \sum\limits^{\infty}_{k=0} a_{k+n} a_k (x-a)^k + R_n(a,x)$\\
+	$f(x) = \sum\limits^{\infty}_{k=0} a_k (x-a)^k + R_n(a,x)$\\
 	avec $a_k = \frac{1}{k!} f^{(k)}(a)$ et avec\\
 	$R_n(a,x) = \frac{1}{(n+1)!} f^{(n+1)}(u) (x-a)^{n+1}$\\
 	où $u \in ]a,x[$ si $x>a$ et $u \in ]x,a[$ si $x<a$}
@@ -903,7 +903,7 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 	$\int_a^b f(x)g(x) dx = \big[ F(x) g(x)\big]_a^b - \int_a^b F(x) g'(x) dx$\\
 	avec $f$ continue sur $[a,b]$ et $g$ continûment dérivable sur $[a,b]$. $F$ une primitive de $f$.\\
 	et dans le cas d'une intégrale indéfinie :\\
-	$\int2 f(x)g(x) dx = F(x)g(x) - \int F(x)g'(x) dx$ }
+	$\int f(x)g(x) dx = F(x)g(x) - \int F(x)g'(x) dx$ }
 \end{note}
 
 \begin{note}
