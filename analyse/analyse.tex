@@ -743,7 +743,7 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 	\tags{series fonctions derivees taylor}
 	\xfield{Donner le théorème de Taylor (développement limité d'ordre $n$)}
 	\xfield{Soit la fonction de classe $C^{n+1}(I)$ pour un $n \in \mathbb{N}$ et soit $a,x \in I$ Alors\\
-	$f(x) = \sum\limits^{\infty}_{k=0} a_k (x-a)^k + R_n(a,x)$\\
+	$f(x) = \sum\limits^{n}_{k=0} a_k (x-a)^k + R_n(a,x)$\\
 	avec $a_k = \frac{1}{k!} f^{(k)}(a)$ et avec\\
 	$R_n(a,x) = \frac{1}{(n+1)!} f^{(n+1)}(u) (x-a)^{n+1}$\\
 	où $u \in ]a,x[$ si $x>a$ et $u \in ]x,a[$ si $x<a$}
@@ -800,67 +800,67 @@ $\frac{f'(u)}{g'(u)}=\frac{f(b)-f(a)}{g(b)-g(a)}$}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int x^n$}
+	\xfield{$\int x^n dx$}
 	\xfield{$\frac{1}{n+1}x^{n+1} + C$, $n\neq 1, C\in \mathbb{R}$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \frac{1}{x}$}
+	\xfield{$\int \frac{1}{x} dx$}
 	\xfield{$\ln(\vert x\vert ) + C$, $x \in \mathbb{R}^*$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int e^x$}
+	\xfield{$\int e^x dx$}
 	\xfield{$e^x + C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \ln(x)$}
+	\xfield{$\int \ln(x) dx$}
 	\xfield{$x\ln(x)-x+C$, $x>0$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \frac{f'(x)}{f(x)}$}
+	\xfield{$\int \frac{f'(x)}{f(x)} dx$}
 	\xfield{$\ln(\vert f(x) \vert ) +C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int e^{x^2}2x$}
+	\xfield{$\int e^{x^2}2x dx$}
 	\xfield{$e^{x^2}+C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \cos(x)$}
+	\xfield{$\int \cos(x) dx$}
 	\xfield{$\sin(x) +C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \sin(x)$}
+	\xfield{$\int \sin(x) dx$}
 	\xfield{$-\cos(x) +C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \tan(x) = \frac{\sin(x)}{\cos(x)}$}
+	\xfield{$\int \tan(x)  dx =\int \frac{\sin(x)}{\cos(x)} dx$}
 	\xfield{$-\ln(\vert \cos(x) \vert ) + C$, $x \in D(\tan)$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \frac{1}{1+x^2}$}
+	\xfield{$\int \frac{1}{1+x^2} dx$}
 	\xfield{$\arctan(x) + C$}
 \end{note}
 
 \begin{note}
 	\tags{integrales}
-	\xfield{$\int \frac{f'(x)}{1+f(x)^2}$}
+	\xfield{$\int \frac{f'(x)}{1+f(x)^2} dx$}
 	\xfield{$\arctan(f(x)) +C$}
 \end{note}
 
@@ -917,6 +917,14 @@ Il y a maintenant deux possibilités: ou $f(a)$ et $f(c)$ sont de signes contrai
 L’algorithme de dichotomie est alors appliqué au sous-intervalle dans lequel le changement de signe se produit, ce qui signifie que l’algorithme de dichotomie est en soi récursif.\\
 L’erreur absolue de la méthode de dichotomie est au plus de \\
 $\frac{b-a}{2^{n+1}}$}
+\end{note}
+
+\begin{note}
+	\tags{derivees}
+	\xfield{$x>0, (\vert x\vert )' = $ ?\\
+			$x<0, (\vert x\vert )' = $ ? }
+	\xfield{$x>0, (\vert x\vert )' = 1$\\
+			$x<0, (\vert x\vert )' = $}
 \end{note}
 
 \begin{note}
