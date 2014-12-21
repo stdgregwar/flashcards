@@ -1001,5 +1001,71 @@ $\frac{b-a}{2^{n+1}}$}
 	\xfield{$\frac{1}{x\ln a}$}
 \end{note}
 
+\begin{note}
+	\tags{integrales,series}
+	\xfield{Définir l'intégration de la série limitée :\\
+	$f(x) = f(a) + f'(a) (x-a) + ... + \frac{1}{n!}f^{(n)}(a)(x-a)^n + o((x-a)^n)$\\
+	Lorsque $x \to a$.}
+	\xfield{$F(x) : = \int_a^x f(t)dt$\\
+	$=f(a)(x-a)+\frac{f'(a)}{2}(x-a)^2 + ... + \frac{1}{(n+1)!}f^{(n)}(a)(x-a)^{n+1} + o((x-a)^{n+1}$}
+\end{note}
+
+\begin{note}
+	\tags{integrales,series}
+	\xfield{Définir l'intégration de la série entière :\\
+	$f(x) := \sum\limits_{k = 0}^{\infty} a_k (x-a)^k$\\
+	Avec un rayon de converage $r>0$.}
+	\xfield{$F(x) : = \int_a^x f(t)dt$\\
+	$= \sum\limits_{k = 0}^{\infty} a_k \frac{1}{k+1}(x-a)^{k+1}$\\
+	Avec un rayon de convergence $r>0$.}
+\end{note}
+
+\begin{note}
+	\tags{integrales}
+	\xfield{Comment intégrer une fonction sous la forme $f(x) = \frac{p(x)}{q(x)}$ avec $p,q$ des polynômes et deg($p$) $<$ deg($q$) plus facilement ?.}
+	\xfield{Il suffit d'utiliser les fractions partielles (partial fractions) vues au cours de DS.}
+\end{note}
+
+\begin{note}
+	\tags{integrales}
+	\xfield{Définir comment intégrer une intégrale généralisée de type 1.}
+	\xfield{Nous pouvons distinguer trois cas :\begin{enumerate}
+		\item Si $f$ est continue sur $[a,b[$.\\
+			$\int_a^b f(x)dx := \lim\limits_{\substack{\epsilon \to 0 \\ \epsilon > 0}} \int_a^{b-\epsilon}f(x)dx$.
+		\item Si $f$ est continue sur $]a,b]$.\\
+			$\int_a^b f(x)dx := \lim\limits_{\substack{\epsilon \to 0 \\ \epsilon > 0}} \int_{a+\epsilon}^{b}f(x)dx$.
+		\item Si $f$ est continue sur $]a,b[$.\\
+			$\int_a^b f(x)dx := \lim\limits_{\substack{\epsilon_1 \to 0 \\ \epsilon_2 \to 0 \\ \epsilon_1,\epsilon_2 > 0}} \int_{a+\epsilon}^{b-\epsilon}f(x)dx$.\\
+			(Une limite après l'autre, l'ordre ne joue pas de rôle.
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\tags{integrales}
+	\xfield{Définir comment intégrer une intégrale généralisée de type 2.}
+	\xfield{Nous pouvons distinguer trois cas :\begin{enumerate}
+		\item Si $f$ est continue sur $[a,\infty[$.\\
+		$\int_{a}^{\infty} f(x)dx := \lim\limits_{\substack{R \to \infty}} \int_{a}^{R}f(x)dx$.
+		\item Si $f$ est continue sur $]-\infty,b]$.\\
+		$\int_{-\infty}^{b} f(x)dx := \lim\limits_{\substack{R \to -\infty}} \int_{R}^{b}f(x)dx$.
+		\item Si $f$ est continue sur $]-\infty,\infty]$.\\
+		$\int_{-\infty}^{\infty} f(x)dx := \lim\limits_{\substack{R_1 \to \infty \\ R_2 \to -\infty}} \int_{R_2}^{R_1}f(x)dx$.
+	\end{enumerate} }
+\end{note}
+
+\begin{note}
+	\tags{integrales}
+	\xfield{Définir comment intégrer une intégrale généralisée de type 3.}
+	\xfield{Nous pouvons distinguer deux cas :\begin{enumerate}
+		\item Si $f$ est continue sur $]a,\infty[$ \\
+			$\int_{a}^{\infty} f(x)dx := \int_{a}^{c} f(x)dx + \int_{c}^{\infty}f(x)dx$, $c \in ]a,\infty[$\\
+			$= \int_{a}^{\infty} f(x)dx := \lim\limits_{\substack{R \to \infty \\ \epsilon \to 0 \\ \epsilon > 0}} \int_{a+\epsilon}^{R}f(x)dx$.\\
+		\item Si $f$ est continue sur $]-\infty,b[$ \\
+			$\int_{-\infty}^{b} f(x)dx := \int_{-\infty}^{c} f(x)dx + \int_{c}^{b}f(x)dx$, $c \in ]-\infty,b[$\\
+			$= \int_{-\infty}^{b} f(x)dx := \lim\limits_{\substack{R \to -\infty \\ \epsilon \to 0 \\ \epsilon > 0}} \int_{R}^{b-\epsilon}f(x)dx$.\\
+	\end{enumerate}
+	Donc, s oit nous divisons donc l'intégrale en deux intégrales de type 1 et 2, soit on la traite directement.}
+\end{note}
+
 
 \end{document}
