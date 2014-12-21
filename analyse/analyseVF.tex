@@ -141,42 +141,42 @@ mais $f$ ne l’est pas.}
 \tags{V/F}
 	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
 	$f \circ g = g \circ f \Leftrightarrow f = g$.}
-	\xfield{Faux.}
+	\xfield{Faux. Prendre par exemple $f(x) = x$ et $g(x) = x^2$ qui satisfont $(f \circ g)(x) = x^2 = (g \circ f)(x)$ avec $f\neq g$}
 \end{note}
 
 \begin{note}
 \tags{V/F}
 	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
 	Si $f$ et $g$ sont injectives, alors $f \circ g$ est injective.}
-	\xfield{Vrai.}
+	\xfield{Vrai. Soient $x_1,x_2 \in \mathbb{R}$ tels que $f(g(x_1))=f(g(x_2))$. Comme $f$ est injective, on a $g(x_1) = g(x_2)$, et par l'injectivité de $g$, il suit que $x_1 = x_2$. Ainsi $f \circ g$ est bien comme injective.}
 \end{note}
 
 \begin{note}
 \tags{V/F}
-	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
+	\xfield{Soient $f: \mathbb{R} \to \mathbb{R}$ une fonction.\\
 	Si $f \circ f$ est injective, alors $f$ est injective.}
-	\xfield{Vrai}
+	\xfield{Vrai. Soient $x_1,x_2 \in \mathbb{R}$ tels que $f(x_1)=f(x_2)$. Comme $f \circ f$ est injective, on conclut que $x_1=x_2$ et donc $f$ est injective.}
 \end{note}
 
 \begin{note}
 \tags{V/F}
 	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
 	Si $f \circ g$ est injective, alors $g$ est injective.}
-	\xfield{Vrai}
+	\xfield{Vrai. Soient $x_1,x_2 \in \mathbb{R}$ tels que $g(x_1)=g(x_2)$. Donc on a $f(g(x_1))=f(g(x_2))$. Comme $f \circ g$ est injective, on conclut que $x_1=x_2$ et donc $g$ est injective.}
 \end{note}
 
 \begin{note}
 \tags{V/F}
 	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
 	Si $f \circ g$ est injective, alors $f$ est injective.}
-	\xfield{Faux}
+	\xfield{Faux. Prendre par exemple $f(x) = x^2$ et $g(x) = e^x$ qui sont définies de $\mathbb{R}$ sur $\mathbb{R}$. Alors $f$ n'est pas injective mais $(f\circ g)(x) = e^{2x}$ est injective.}
 \end{note}
 
 \begin{note}
 \tags{V/F}
 	\xfield{Soient $f, g : \mathbb{R} \to \mathbb{R}$ deux fonctions.\\
 	Si $f \circ g$ est surjective, alors $f$ est surjective.}
-	\xfield{Vrai}
+	\xfield{Vrai. Soit $y \in \mathbb{R}$. Comme $f\circ g$ est surjective, il existe $x\in \mathbb{R}$ tel que $(f\circ g)(x) = y$. En posant $z = g(x)$ on a trouvé un $z \in \mathbb{R}$ tel que $f(z) = y$. Ainsi $f$ est surjective.}
 \end{note}
 
 \begin{note}
