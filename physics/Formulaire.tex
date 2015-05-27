@@ -77,7 +77,7 @@ La variation de l'énergie cinétique est égale à la somme des travaux de tout
 \begin{tabular}{c|c|c}
 Mouvement & Equadiff & Solutions \\
 \hline
-Oscillateur harmonique & $ddot{x} + \omega^2x = 0$ & $Acos(\omega_0t) + Bsin(\omega_0t) = Csin(\omega_0t+D)$ \\
+Oscillateur harmonique & $\ddot{x} + \omega^2x = 0$ & $Acos(\omega_0t) + Bsin(\omega_0t) = Csin(\omega_0t+D)$ \\
 Oscillateur amorti & $\ddot{x} + 2\gamma\dot{x}+\omega^2_0x = 0$ & - \\
 Oscillateur amorti forcé & $\ddot{x} + 2 \gamma \dot{x} + \omega^2_0 x = \alpha_0sin(\omega t)$ & - \\
 \end{tabular}
@@ -207,6 +207,14 @@ $\vec{a_t} = \vec{\alpha} \times \vec{r}$,
 $I = \sum \limits_M d^2 dm$,
 $E_{cin} = \frac{1}{2}I\omega^2$
 
+Steiner :
+
+$$I_{\Delta C} = I_{\Delta G} + M d^2$$
+
+Energie cinétique d'un solide:
+
+$$E_{cin} = \frac{1}{2} M \vec{v}_A^2 + M \vec{v}_A \cdot \left(\omega \times R \right)  + \frac{1}{2} \vec\omega \cdot \left(\tilde{I}_A \cdot \vec\omega \right)$$
+
 \section{Systeme de points materiels}
 
 Equation du mouvement relatif :
@@ -214,4 +222,10 @@ Equation du mouvement relatif :
 \begin{center}
 $\vec{F}_{2 \leftarrow 1} = \mu \ddot\vec{r}$ où $\mu = \frac{m_1 m_2}{m_1 + m_2}$ la masse réduite.
 \end{center}
+
+\section{Changement de referentiel}
+Transformation des vitesses :
+$$\vec{v}_p = \vec{v}'_p + \vec{v}_{O'} + \vec\omega \times \ \vec{O'P} $$
+Transformation des accélerations:
+$$\vec{a}_p = \vec{a}_p' + 2\vec\omega \times  \vec{v}'_p + \vec{a}_{O'} + \omega \times \left(\omega \times \vec{O'P}\right) + \dot{\vec\omega} \times \vec{O'P}$$
 \end{document}
